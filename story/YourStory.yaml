@@ -1,0 +1,21 @@
+
+start:
+  - play morningBGM:
+  - show room: WITH FADE
+  - text: Hello World
+  - show deuzi: normal AT CENTER WITH FADE
+  - deuzi says: Welcome to Tam Cam 2049!
+  - deuzi says: This does not really work
+  - deuzi says: but at least the mechanics work
+  - effect ROLLINGCREDITS:
+    endGame: true
+    text:
+      - Linn is Gay
+      - Linn is Gay
+      - Linn is Gay
+      - Linn is Gay
+      - Linn is Gay
+      - Linn is Gay
+      - Linn is Gay
+      - Linn is Gay
+      - Linn is Gay
