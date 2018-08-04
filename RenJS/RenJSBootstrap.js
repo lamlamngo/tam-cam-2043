@@ -11,8 +11,6 @@ var bootstrap = {
     game.scale.scaleMode = Phaser.ScaleManager[globalConfig.scaleMode];
     game.scale.setUserScale(2,2,0,0);
     game.scale.refresh();
-
-    game.time.advancedTiming = true;
   },
 
   preload: function () {

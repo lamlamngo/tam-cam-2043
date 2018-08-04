@@ -81,6 +81,6 @@ function CGSManager(){
       tweenables.alpha = 1;
       tweenables.x = -200;
       tweenables.y = globalConfig.h/2;
-      RenJS.tweenManager.tween(this.cgs[name],tweenables,RenJS.resolve,10000* (RenJS.time.fps / 60),true);
+      RenJS.tweenManager.tween(this.cgs[name],tweenables,RenJS.resolve,10000,true);
     }
 }
