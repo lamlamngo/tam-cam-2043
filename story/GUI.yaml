@@ -113,21 +113,21 @@ menus:
     sliders:
       textSpeed:
         position:
-          x: 102
-          y: 157
+          x: 118
+          y: 226
         sprite: sliderFull
       autoSpeed:
         position:
-          x: 371
-          y: 157
+          x: 460
+          y: 226
         sprite: sliderFull
       bgmv:
         position:
-          x: 102
-          y: 283
+          x: 118
+          y: 138
         sprite: sliderFull
       sfxv:
         position:
-          x: 371
-          y: 283
+          x: 460
+          y: 138
         sprite: sliderFull
