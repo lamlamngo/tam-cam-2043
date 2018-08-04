@@ -2,7 +2,7 @@ function StoryManager(){
 
     this.actorsIndex = {};
 
-    this.setupStory = function(){        
+    this.setupStory = function(){
         //load backgrounds
         this.backgroundSprites = game.add.group();
         _.each(RenJS.setup.backgrounds,function(filename,background){
@@ -76,17 +76,17 @@ function StoryManager(){
             } else {
                 mainAction = str[0];
                 actor = str[1];
-            }            
+            }
             var actorType = RenJS.storyManager.getActorType(actor);
             //parse WITH and AT
             var params = action[key];
             if (_.contains(actionParams.withTransition,mainAction)){
                 str = params ? params.split(" ") : [];
                 if (str.indexOf("WITH")!=-1){
-                    action.transitionName = str[str.indexOf("WITH")+1];                    
+                    action.transitionName = str[str.indexOf("WITH")+1];
                 } else {
                     action.transitionName = config.transitions[actorType];
-                }                
+                }
                 action.transition = RenJS.transitions[action.transitionName];
             }
             if (params && _.contains(actionParams.withPosition,mainAction)){
@@ -105,9 +105,9 @@ function StoryManager(){
                 }
             }
             action.manager = RenJS[actorType+"Manager"];
-            RenJS.control.action = mainAction; 
-            RenJS.control.wholeAction = params; 
-            RenJS.control.nextAction = null; 
+            RenJS.control.action = mainAction;
+            RenJS.control.wholeAction = params;
+            RenJS.control.nextAction = null;
             console.log("Doing "+RenJS.control.action);
             switch(RenJS.control.action){
                 // case "custom": RenJS.control.action = "Custom fct"; action.execute(); break;
@@ -129,16 +129,16 @@ function StoryManager(){
                 case "else" :
                     RenJS.resolve();
                     break;
-                case "show" :                     
+                case "show" :
                     action.manager.show(actor,action.transition,action);
                     break;
-                case "hide" : 
+                case "hide" :
                     action.manager.hide(actor,action.transition);
                     break;
-                case "say" : 
+                case "say" :
                     RenJS.textManager.say(actor,params);
                     break;
-                case "wait" : 
+                case "wait" :
                     if (params == "click"){
                         RenJS.waitForClick();
                     } else {
@@ -149,7 +149,10 @@ function StoryManager(){
                     console.log(action);
                     RenJS.cgsManager.animate(actor,action,action.time)
                     break;
-                case "choice" : 
+                case "move" :
+                    RenJS.cgsManager.move(actor)
+                    break;
+                case "choice" :
                     // debugger;
                     RenJS.control.skipping = false;
                     RenJS.logicManager.showChoices(_.clone(params));
@@ -158,7 +161,7 @@ function StoryManager(){
                     RenJS.control.skipping = false;
                     RenJS.logicManager.showVisualChoices(_.clone(params));
                     break;
-                case "interrupt" : 
+                case "interrupt" :
                     RenJS.logicManager.interrupt(actor,_.clone(params));
                     // debugger;
                     // if (params == "stop"){
@@ -200,8 +203,8 @@ function StoryManager(){
                     params();
                     break;
             }
-            
-        }); 
+
+        });
     }
 
     this.interpret = function() {
@@ -225,8 +228,8 @@ function StoryManager(){
                 }).then(function(){
                     resolve();
                 });
-            };         
-        }); 
+            };
+        });
     }
 
 }

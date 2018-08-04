@@ -1,13 +1,13 @@
 var globalConfig = {
-  w: 800,
-  h: 600,
+  w: 640,
+  h: 360,
   mode: "AUTO",
-  scaleMode: "EXACT_FIT", //SHOW_ALL, EXACT_FIT
+  scaleMode: "USER_SCALE", //SHOW_ALL, EXACT_FIT
   splash: { //The "Loading" page for your game
-    loadingScreen: "assets/gui/splash.png", //splash background
+    loadingScreen: "assets/gui/loading_background.png", //splash background
     loadingBar: {
-      fullBar: "assets/gui/loadingbar.png",
-      position: {x:111,y:462}
+      fullBar: "assets/gui/loading_bars.png",
+      position: {x:0,y:0}
     }
   },
   fonts: "assets/gui/fonts.css",

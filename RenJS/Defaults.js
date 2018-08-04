@@ -3,15 +3,15 @@ var defaults = {
     name: "RenJS-GAME",
 
     defaultTextStyle: {
-        font: "bold 16pt Arial",
+        font: "bold 16pt FVF Femendo 08",
         fill: "#FFFFFF",
         align: "left"
     },
     settings: {
         textSpeed: 50,
         autoSpeed: 150,
-        bgmv: 1,
-        sfxv: 1,
+        bgmv: 0.5,
+        sfxv: 0.5,
         muted: false
     },
 
@@ -25,9 +25,11 @@ var defaults = {
     positions : {
         LEFT: {x:globalConfig.w/6,y:globalConfig.h},
         OUTLEFT: {x:-(globalConfig.w/6),y:globalConfig.h},
-        CENTER: {x:globalConfig.w/2,y:globalConfig.h - 300},
+        CENTER: {x:globalConfig.w/2,y:globalConfig.h/2},
         RIGHT: {x:(globalConfig.w/6)*5,y:globalConfig.h},
-        OUTRIGHT: {x:(globalConfig.w/6)*7,y:globalConfig.h}
+        OUTRIGHT: {x:(globalConfig.w/6)*7,y:globalConfig.h},
+        START: {x: 3000, y:globalConfig.h/2},
+        END: {x: 300, y: 300}
     },
 
     //miliseconds for fade transitions

@@ -1,5 +1,5 @@
 
-var game = new Phaser.Game(globalConfig.w, globalConfig.h, Phaser[globalConfig.mode], "");
+var game = new Phaser.Game(globalConfig.w, globalConfig.h, Phaser[globalConfig.mode], "", null, false, false, null);
 
 var bootstrap = {
 
@@ -9,6 +9,7 @@ var bootstrap = {
       game.scale.pageAlignVertically = true;
     }
     game.scale.scaleMode = Phaser.ScaleManager[globalConfig.scaleMode];
+    game.scale.setUserScale(2,2,0,0);
     game.scale.refresh();
   },
 

@@ -2,89 +2,86 @@ assets:
   fonts:
     - font
   images:
-    mainBackground: assets/backgrounds/cyberpunk.jpg
+    mainBackground: assets/gui/main_menu.png
     settingsBackground: assets/gui/settings.png
     sliderFull: assets/gui/slider.png
-    messageBox:  assets/gui/textbox.png
-    nameBox:  assets/gui/namebox.png
+    messageBox:  assets/gui/text_box.png
+    nameBox:  assets/gui/name_box.png
     ctc: assets/gui/ctc.png
-    startButton: assets/gui/startbutton_1.png
+    startButton: assets/gui/newgame_button.png
+    loadButton: assets/gui/load_button.png
+    settingButton: assets/gui/settings_button.png
+    returnButton: assets/gui/return_button.png
+    qmAutoButton: assets/gui/qmn_auto.png
+    qmSkipButton: assets/gui/qmn_skip.png
+    qmSettingsButton: assets/gui/qmn_settings.png
+    qmSaveButton: assets/gui/qmn_save.png
   spritesheets:
-    # startButton: assets/gui/startbutton.png 163 83
-    loadButton: assets/gui/loadbutton.png 163 83
-    saveButton: assets/gui/savebutton.png 163 83
-    settingsButton: assets/gui/settingsbutton.png 163 83
-    returnButton: assets/gui/returnbutton.png 163 83
-    qmAutoButton: assets/gui/qmenuauto.png 47 45
-    qmSkipButton: assets/gui/qmenuskip.png 47 45
-    qmSettingsButton: assets/gui/qmenusettings.png 47 45
-    qmMuteButton: assets/gui/Mute.png 50 50
-    qmSaveButton: assets/gui/qmenusave.png 47 45
     choice: assets/gui/choice.png 716 65
     interrupt: assets/gui/interrupt.png 716 95
   audio:
-    # mainMusic: assets/audio/Evan_Schaeffer_-_01_-_Aqueduct.mp3
+    mainMusic: assets/audio/mainmenu.mp3
 hud:
   area:
-    - 640 450 748 554
+    - 496 272 594 344
   message:
     position:
-      x: 46
-      y: 435
+      x: 47
+      y: 262
     textPosition:
-      x: 36
-      y: 36
+      x: 16
+      y: 16
     textStyle:
-      font: 16pt font
+      font: 10pt FVF Femendo 08
       wordWrap: true
-      wordWrapWidth: 545
+      wordWrapWidth: 436
       fill: "#ac9393"
   name:
     position:
-      x: 36
-      y: -40
+      x: 74
+      y: 233
     textStyle:
-      font: 20pt font
+      font: 20pt FVF Femendo 08
       boundsAlignH: center
       boundsAlignV: middle
   ctc:
     position:
-      x: 570
-      y: 90
+      x: 472
+      y: 325
     animated: false
   choice:
     separation: 95
     textStyle:
-      font: 20pt font
+      font: 20pt FVF Femendo 08
       boundsAlignH: center
       boundsAlignV: middle
       fill: "#666666"
   interrupt:
     textStyle:
-      font: 20pt font
+      font: 20pt FVF Femendo 08
       boundsAlignH: center
       boundsAlignV: middle
       fill: "#664b4b"
   buttons:
     auto:
       position:
-        x: 647
-        y: 502
+        x: 500
+        y: 272
       sprite: qmAutoButton
     skip:
       position:
-        x: 694
-        y: 502
+        x: 500
+        y: 308
       sprite: qmSkipButton
     save:
       position:
-        x: 694
-        y: 457
+        x: 549
+        y: 272
       sprite: qmSaveButton
     settings:
       position:
-        x: 647
-        y: 457
+        x: 549
+        y: 308
       sprite: qmSettingsButton
     # mute: qmMuteButton 1175 60
 menus:
@@ -93,6 +90,44 @@ menus:
     buttons:
       start:
         position:
-          x: 150
-          y: 362
+          x: 90
+          y: 277
         sprite: startButton
+      load:
+        position:
+          x: 273
+          y: 277
+        sprite: loadButton
+      settings:
+        position:
+          x: 456
+          y: 277
+        sprite: settingButton
+  settings:
+    buttons:
+      return:
+        position:
+          x: 566
+          y: 7
+        sprite: returnButton
+    sliders:
+      textSpeed:
+        position:
+          x: 102
+          y: 157
+        sprite: sliderFull
+      autoSpeed:
+        position:
+          x: 371
+          y: 157
+        sprite: sliderFull
+      bgmv:
+        position:
+          x: 102
+          y: 283
+        sprite: sliderFull
+      sfxv:
+        position:
+          x: 371
+          y: 283
+        sprite: sliderFull

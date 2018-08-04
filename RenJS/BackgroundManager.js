@@ -18,15 +18,15 @@ function BackgroundManager(){
         this.current.alpha = 1;
     }
 
-    this.show = function(name,transition){   
+    this.show = function(name,transition){
         var oldBg = this.current;
         this.current = name ? this.backgrounds[name] : null;
         // console.log("showing bg "+name);
         // debugger;
-        transition(oldBg,this.current,{x:game.world.centerX,y:game.world.centerY},1,RenJS.storyManager.backgroundSprites);        
+        transition(oldBg,this.current,{x:game.world.centerX,y:game.world.centerY},1,RenJS.storyManager.backgroundSprites);
     }
 
-    this.hide = function(bg,transition){   
+    this.hide = function(bg,transition){
         this.show(null,transition ? transition : RenJS.transitions.FADEOUT);
     }
 
@@ -34,4 +34,3 @@ function BackgroundManager(){
         return _.has(this.backgrounds,actor);
     }
 }
-

@@ -1,12 +1,25 @@
+assets:
+  fonts:
+    - font
 backgrounds:
-  room: assets/backgrounds/homeee.jpg
+  intro-background: assets/backgrounds/intro_background.png
+  intro-background-2: assets/backgrounds/nursery.png
+  intro-background-3: assets/backgrounds/protect-tam.png
 characters:
-  deuzi:
-    displayName: Cam
+  Tam:
+    displayName: Tam
     speechColour: "#ca90cf"
     looks:
-      normal: assets/characters/evol.png
+      normal: assets/characters/tam.png
       happy: assets/characters/tam.png
+cgs:
+  intro-city: assets/backgrounds/intro_01.png
+  train: assets/objects/train.png
 music:
-  rollingCredits: assets/audio/Evan_Schaeffer_-_01_-_Aqueduct.mp3
-  morningBGM: assets/audio/Evan_Schaeffer_-_03_-_Glow.mp3
+  mainmenu: assets/audio/mainmenu.mp3
+  intromusic: assets/audio/intromusic.mp3
+  rain: assets/audio/Rain.mp3
+extra:
+  image:
+    rain: assets/objects/rain.png
+    title: assets/gui/title_card.png

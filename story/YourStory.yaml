@@ -1,21 +1,30 @@
 
 start:
-  - play morningBGM:
-  - show room: WITH FADE
-  - text: Hello World
-  - show deuzi: normal AT CENTER WITH FADE
-  - deuzi says: Welcome to Tam Cam 2049!
-  - deuzi says: This does not really work
-  - deuzi says: but at least the mechanics work
-  - effect ROLLINGCREDITS:
-    endGame: true
-    text:
-      - Linn is Gay
-      - Linn is Gay
-      - Linn is Gay
-      - Linn is Gay
-      - Linn is Gay
-      - Linn is Gay
-      - Linn is Gay
-      - Linn is Gay
-      - Linn is Gay
+  - play intromusic:
+  - show intro-background: AT CENTER WITH FADE
+  - show train: AT START WITH CUT
+  - show intro-city: AT CENTER WITH CUT
+  - ambient RAIN:
+  - move train:
+  - text: Rạng sáng mùa đông năm ấy, khi cả thành phố đang chìm sâu trong giấc ngủ
+  - text: Một cặp song sinh cất tiếng khóc chào đời.
+
+  - hide train:
+  - hide intro-background: WITH CUT
+  - hide intro-city: WITH FADE
+  - ambient CLEAR:
+  - show intro-background-2: AT CENTER WITH FADE
+  - wait : 2000
+  - text: Tuy rằng sinh đôi, nhưng đứa trẻ ra sau khóc nhiều hơn, được cha mẹ chăm sóc nhiều hơn.
+  - text: Đứa trẻ ra trước, ít nói, ít cười,
+  - text: chỉ biết nhìn em mình lớn lên trong vòng tay yêu thương của cha mẹ từ đằng xa.
+  - hide intro-background-2: WITH FADE
+
+  - show intro-background-3: WITH FADE
+  - wait : 2000
+  - text: Tấm luôn cô độc, nhưng Cám và cha mẹ không ai đoái hoài.
+  - text: Một ngày, cuộc đời Tấm sẽ thay đổi. Cô sẽ biến thành một con người ít ai có thể nhận ra.
+
+  - effect SHOWTITLE:
+    title:
+    subtitle: Chương 1

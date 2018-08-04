@@ -10,11 +10,11 @@ function AudioManager(){
         bgs : null
     }
 
-    this.isMusic = function(actor){    
+    this.isMusic = function(actor){
         return _.has(this.musicList,actor);
     }
 
-    this.isSfx = function(actor){    
+    this.isSfx = function(actor){
         return _.has(this.sfx,actor);
     }
 
@@ -30,9 +30,9 @@ function AudioManager(){
             //     this.musicList[key] = music;
             // }, this);
         },this);
-        
+
         _.each(RenJS.setup.sfx,function(filename,key){
-            this.sfx[key] = game.add.audio(key);            
+            this.sfx[key] = game.add.audio(key);
             audioList.push(this.sfx[key]);
         },this);
         game.sound.setDecodedCallback(audioList, function(){
@@ -59,7 +59,7 @@ function AudioManager(){
             }
         }
         config.settings.muted = !config.settings.muted;
-        
+
         // RenJS.resolve();
     }
 
@@ -99,7 +99,7 @@ function AudioManager(){
             }
         }
         if (type == "bgm") {
-            RenJS.resolve();    
+            RenJS.resolve();
         }
     }
 
@@ -122,7 +122,7 @@ function AudioManager(){
             }
         }
         if (type == "bgm") {
-            RenJS.resolve();    
+            RenJS.resolve();
         }
     }
 
@@ -130,14 +130,13 @@ function AudioManager(){
         if (this.audioLoaded && !config.settings.muted){
             // debugger;
             this.sfx[key].volume = config.settings.sfxv;
-            this.sfx[key].play();    
+            this.sfx[key].play();
 
         }
-        
+
         // var fx = game.add.audio(key);
         // fx.onStop.add(function(){
         //     RenJS.resolve();
         // });
     }
 }
-

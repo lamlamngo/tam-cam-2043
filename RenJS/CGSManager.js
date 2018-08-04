@@ -15,16 +15,16 @@ function CGSManager(){
         // console.log(transition);
         // console.log(props);
         var position = props.position ? props.position : {x:game.world.centerX,y:game.world.centerY};
-        
-        this.cgs[name] = RenJS.storyManager.cgsSprites.create(position.x,position.y,name);            
-        this.cgs[name].anchor.set(0.5);        
+
+        this.cgs[name] = RenJS.storyManager.cgsSprites.create(position.x,position.y,name);
+        this.cgs[name].anchor.set(0.5);
         this.cgs[name].alpha = 0;
         if (props.zoom){
-            this.cgs[name].scale.set(props.zoom);    
-        }        
+            this.cgs[name].scale.set(props.zoom);
+        }
         if (props.angle){
             this.cgs[name].angle = props.angle;
-        }        
+        }
         this.current[name] = {name:name, position: position, zoom:props.zoom,angle: props.angle};
         transition(null,this.cgs[name],position);
     }
@@ -72,8 +72,15 @@ function CGSManager(){
         this.current = {};
     }
 
-    this.isCGS = function(actor){    
+    this.isCGS = function(actor){
         return _.has(this.cgs,actor);
     }
-}
 
+    this.move = function(name){
+      var tweenables = {};
+      tweenables.alpha = 1;
+      tweenables.x = -200;
+      tweenables.y = globalConfig.h/2;
+      RenJS.tweenManager.tween(this.cgs[name],tweenables,RenJS.resolve,10000,true);
+    }
+}
