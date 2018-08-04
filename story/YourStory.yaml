@@ -14,8 +14,8 @@ start:
   - dis:
 
   - hide train:
-  - hide intro-background: WITH CUT
-  - hide intro-city: WITH FADE
+  - hide intro-background: WITH FADE
+  - hide intro-city: WITH FADETOBLACK
   - ambient CLEAR:
   - show intro-background-2: AT CENTER WITH FADE
   - wait : 2000
