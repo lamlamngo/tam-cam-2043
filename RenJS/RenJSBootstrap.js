@@ -1,6 +1,5 @@
 
-var game = new Phaser.Game(globalConfig.w, globalConfig.h, Phaser[globalConfig.mode], "", null, false, false, null);
-
+var game = new Phaser.Game(globalConfig.w, globalConfig.h, Phaser[globalConfig.mode], "", false, false, null);
 var bootstrap = {
 
   init: function() {
@@ -28,7 +27,6 @@ var bootstrap = {
     game.state.add('preload', preload);
     game.state.start('preload');
   }
-
 };
 
 game.state.add('bootstrap', bootstrap);

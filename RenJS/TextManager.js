@@ -18,4 +18,3 @@ function TextManager(){
         this.show(text,character.name,character.speechColour);
     }
 }
-

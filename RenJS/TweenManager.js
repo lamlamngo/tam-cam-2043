@@ -8,14 +8,14 @@ function TweenManager(){
         if(callback){
             tween.onComplete.addOnce(callback, this);
             tween.callbackOnComplete = callback;
-        }        
+        }
         tween.tweenables = tweenables;
         if (start){
             RenJS.tweenManager.current = [];
             tween.start();
             if (!RenJS.control.auto) {
-                RenJS.waitForClick(this.skip);    
-            }            
+                RenJS.waitForClick(this.skip);
+            }
         }
         RenJS.tweenManager.current.push(tween);
         // if (RenJS.control.skipping){
@@ -38,7 +38,7 @@ function TweenManager(){
         },tm);
         tm.current[0].start();
         if (!RenJS.control.auto) {
-            RenJS.waitForClick(tm.skip);    
+            RenJS.waitForClick(tm.skip);
         }
     }
 
@@ -50,7 +50,7 @@ function TweenManager(){
             tween.start();
         },tm);
         if (!RenJS.control.auto) {
-            RenJS.waitForClick(tm.skip);    
+            RenJS.waitForClick(tm.skip);
         }
     }
 
@@ -67,8 +67,7 @@ function TweenManager(){
             });
             if (tween.callbackOnComplete){
                 tween.callbackOnComplete();
-            }            
-        });        
+            }
+        });
     }
 }
-

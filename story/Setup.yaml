@@ -1,10 +1,4 @@
-assets:
-  fonts:
-    - font
 backgrounds:
-  intro-background: assets/backgrounds/intro_background.png
-  intro-background-2: assets/backgrounds/nursery.png
-  intro-background-3: assets/backgrounds/protect-tam.png
 characters:
   Tam:
     displayName: Tam
@@ -13,6 +7,10 @@ characters:
       normal: assets/characters/tam.png
       happy: assets/characters/tam.png
 cgs:
+  black: assets/backgrounds/black.png
+  intro-background-2: assets/backgrounds/nursery.png
+  intro-background-3: assets/backgrounds/protect-tam.png
+  intro-background: assets/backgrounds/intro_background.png
   intro-city: assets/backgrounds/intro_01.png
   train: assets/objects/train.png
 music:

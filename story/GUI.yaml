@@ -5,7 +5,7 @@ assets:
     mainBackground: assets/gui/main_menu.png
     settingsBackground: assets/gui/settings.png
     sliderFull: assets/gui/slider.png
-    messageBox:  assets/gui/text_box.png
+    messageBox:  assets/gui/text_box_2.png
     nameBox:  assets/gui/name_box.png
     ctc: assets/gui/ctc.png
     startButton: assets/gui/newgame_button.png
@@ -26,16 +26,17 @@ hud:
     - 496 272 594 344
   message:
     position:
-      x: 47
-      y: 262
+      x: 0
+      y: 269
     textPosition:
-      x: 16
-      y: 16
+      x: 160
+      y: 20
     textStyle:
-      font: 10pt FVF Femendo 08
+      font: 9pt FVF Femendo 08
       wordWrap: true
-      wordWrapWidth: 436
-      fill: "#ac9393"
+      wordWrapWidth: 320
+      # fill: "#ac9393"
+      fill: "#ffffff"
   name:
     position:
       x: 74
@@ -63,26 +64,26 @@ hud:
       boundsAlignV: middle
       fill: "#664b4b"
   buttons:
-    auto:
-      position:
-        x: 500
-        y: 272
-      sprite: qmAutoButton
-    skip:
-      position:
-        x: 500
-        y: 308
-      sprite: qmSkipButton
-    save:
-      position:
-        x: 549
-        y: 272
-      sprite: qmSaveButton
-    settings:
-      position:
-        x: 549
-        y: 308
-      sprite: qmSettingsButton
+    # auto:
+    #   position:
+    #     x: 500
+    #     y: 272
+    #   sprite: qmAutoButton
+    # skip:
+    #   position:
+    #     x: 500
+    #     y: 308
+    #   sprite: qmSkipButton
+    # save:
+    #   position:
+    #     x: 549
+    #     y: 272
+    #   sprite: qmSaveButton
+    # settings:
+    #   position:
+    #     x: 549
+    #     y: 308
+    #   sprite: qmSettingsButton
     # mute: qmMuteButton 1175 60
 menus:
   main:

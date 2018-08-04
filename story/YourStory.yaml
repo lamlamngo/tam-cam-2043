@@ -1,9 +1,11 @@
 
 start:
+  - wait: 3000
   - play intromusic:
   - show intro-background: AT CENTER WITH FADE
   - show train: AT START WITH CUT
-  - show intro-city: AT CENTER WITH CUT
+  - show black: AT CENTER WITH CUT
+  - show intro-city: AT CENTER WITH FADE
   - ambient RAIN:
   - move train:
   - text: Rạng sáng mùa đông năm ấy, khi cả thành phố đang chìm sâu trong giấc ngủ

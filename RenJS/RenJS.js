@@ -22,10 +22,10 @@ var RenJS = {
         if (this.blackOverlay){
             console.log("Removing black overlay");
             var tween = game.add.tween(this.blackOverlay);
-            tween.onComplete.addOnce(function(){            
+            tween.onComplete.addOnce(function(){
                 this.blackOverlay.destroy();
                 this.blackOverlay = null;
-            }, this);  
+            }, this);
             tween.to({ alpha: 0 }, RenJS.control.fadetime*2, Phaser.Easing.Linear.None, true);
         }
     },
@@ -43,7 +43,7 @@ var RenJS = {
         RenJS.control.skipping = true;
         console.log("skipping");
         if (RenJS.control.waitForClick){
-            RenJS.control.waitForClick = false;  
+            RenJS.control.waitForClick = false;
             RenJS.control.nextAction();
         }
     },
@@ -67,7 +67,7 @@ var RenJS = {
             stack: RenJS.control.execStack,
             vars: RenJS.logicManager.vars
         }
-        
+
         if (RenJS.customContent.save){
             RenJS.customContent.save(data);
         }
@@ -85,9 +85,9 @@ var RenJS = {
         console.log("LOADING slot "+slot);
         var data = localStorage.getItem("RenJSDATA"+slot);
         if (!data){
-            this.start();    
+            this.start();
             return;
-        } 
+        }
         console.log(data);
         data = JSON.parse(data);
         console.log(data);
@@ -106,7 +106,7 @@ var RenJS = {
         if(data.stack.length != 1){
             for (var i = data.stack.length-2;i>=0;i--){
                 var nestedAction = allActions[stack.c];
-                stack = data.stack[i];                
+                stack = data.stack[i];
                 switch(stack.action){
                     case "interrupt":
                         nestedAction = allActions[data.stack[i+1].interrupting];
@@ -122,7 +122,7 @@ var RenJS = {
                 }
                 var newActions = allActions.slice(stack.c+1);;
                 actions = newActions.concat(actions);
-            }            
+            }
         }
         RenJS.control.execStack = data.stack;
         RenJS.storyManager.currentScene = actions;
@@ -154,16 +154,16 @@ var RenJS = {
             setTimeout(function(){
                 RenJS.control.nextAction();
             },time ? time : config.timeout);
-        }        
+        }
     },
 
-    waitForClickOrTimeout: function(time,callback){        
+    waitForClickOrTimeout: function(time,callback){
         RenJS.control.nextAction = callback;
         RenJS.control.waitForClick = true;
         setTimeout(function(){
             RenJS.control.waitForClick = false;
             RenJS.control.nextAction();
-        },time ? time : config.timeout);        
+        },time ? time : config.timeout);
     },
 
     onTap: function(pointer,doubleTap){
@@ -176,7 +176,7 @@ var RenJS = {
         }
         console.log("click not ignored");
         if (RenJS.control.waitForClick && !RenJS.control.clickLocked){
-            RenJS.control.waitForClick = false;  
+            RenJS.control.waitForClick = false;
             RenJS.lockClick();
             RenJS.control.nextAction();
         }
@@ -195,7 +195,7 @@ var RenJS = {
         RenJS.control.clickLocked = true;
         setTimeout(function() {
             RenJS.control.clickLocked = false
-        }, RenJS.control.clickCooldown);                                              
+        }, RenJS.control.clickCooldown);
     },
 
     resolve: function(){
@@ -205,9 +205,9 @@ var RenJS = {
                 RenJS.control.doBeforeResolve = null;
             }
             // debugger;
-            RenJS.control.waitForClick = false; 
+            RenJS.control.waitForClick = false;
             var resolve = RenJS.control.resolve;
-            RenJS.control.resolve = null;     
+            RenJS.control.resolve = null;
             console.log("Resolving "+RenJS.control.action);
             resolve();
         }
@@ -230,7 +230,7 @@ RenJS.control = {
     doBeforeResolve: null,
     skipping: false,
     auto: false,
-    clickCooldown: config.clickCooldown, 
+    clickCooldown: config.clickCooldown,
 }
 
 RenJS.onInterpretActions = {
@@ -257,3 +257,10 @@ RenJS.tweenManager = new TweenManager();
 RenJS.logicManager = new LogicManager();
 RenJS.storyManager = new StoryManager();
 
+game.state.update = function my_update() {
+  if (RenJS.cgsManager.cgs["train"]){
+    console.log("yes");
+  } else{
+    console.log("no");
+  };
+};
