@@ -30,7 +30,7 @@ hud:
       y: 269
     textPosition:
       x: 160
-      y: 20
+      y: 10
     textStyle:
       font: 9pt FVF Femendo 08
       wordWrap: true

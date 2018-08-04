@@ -25,8 +25,8 @@ start:
   - show intro-background-3: WITH FADE
   - wait : 2000
   - text: Tấm luôn cô độc, nhưng Cám và cha mẹ không ai đoái hoài.
-  - text: Một ngày, cuộc đời Tấm sẽ thay đổi. Cô sẽ biến thành một con người ít ai có thể nhận ra.
-
+  - text: Một ngày, cuộc đời Tấm sẽ thay đổi.
+  - text: Cô sẽ biến thành một con người ít ai có thể nhận ra.
   - effect SHOWTITLE:
     title:
     subtitle: Chương 1
