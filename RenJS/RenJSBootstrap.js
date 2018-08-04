@@ -12,6 +12,7 @@ var bootstrap = {
     game.scale.setUserScale(2,2,0,0);
     game.scale.refresh();
 
+    game.forceSingleUpdate = true;
     game.time.desiredFps = 144;
   },
 
