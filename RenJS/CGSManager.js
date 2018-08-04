@@ -79,7 +79,7 @@ function CGSManager(){
     this.move = function(name){
       var tweenables = {};
       tweenables.alpha = 1;
-      tweenables.x = -200;
+      tweenables.x = -0;
       tweenables.y = globalConfig.h/2;
       RenJS.tweenManager.tween(this.cgs[name],tweenables,RenJS.resolve,10000,true);
     }

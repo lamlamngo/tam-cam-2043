@@ -259,7 +259,12 @@ RenJS.storyManager = new StoryManager();
 
 game.state.update = function my_update() {
   if (RenJS.cgsManager.cgs["train"]){
-    console.log("yes");
+    if (RenJS.cgsManager.cgs["train"].x == -0){
+        RenJS.cgsManager.cgs["train"].x = 1500;
+        RenJS.cgsManager.move("train");
+    } else {
+      console.log("no no");
+    }
   } else{
     console.log("no");
   };

@@ -176,6 +176,9 @@ function StoryManager(){
                 case "text" :
                     RenJS.textManager.show(params);
                     break;
+                case "dis" :
+                    RenJS.textManager.hide();
+                    break;
                 case "play" :
                     // debugger;
                     if (actorType == "bgm"){
