@@ -142,7 +142,6 @@ function StoryManager(){
                 case "show" :
                     if (!Array.isArray(actor)) {
                       action.manager.show(actor,action.transition,action);
-                      break;
                     } else {
                       for (var i = 0; i < actor.length; i++) {
                         if (actor[i] == "train"){
@@ -154,8 +153,15 @@ function StoryManager(){
                         }
                       }
                     }
+                    break;
                 case "hide" :
-                    action.manager.hide(actor,action.transition);
+                    if (!Array.isArray(actor)) {
+                        action.manager.hide(actor,action.transition);
+                    } else {
+                      for (var i = 0; i < actor.length; i++) {
+                        action.manager.hide(actor[i],action.transition);
+                      }
+                    }
                     break;
                 case "say" :
                     RenJS.textManager.say(actor,params);
