@@ -9,7 +9,20 @@ var bootstrap = {
     }
     game.scale.scaleMode = Phaser.ScaleManager[globalConfig.scaleMode];
     game.scale.setUserScale(2,2,0,0);
+
+    game.renderer.renderSession.roundPixels = true;
+    Phaser.Canvas.setImageRenderingCrisp(game.canvas);
     game.scale.refresh();
+
+
+
+//     // scale the game 4x
+// game.scale.scaleMode = Phaser.ScaleManager.USER_SCALE;
+// game.scale.setUserScale(4, 4);
+//
+// // enable crisp rendering
+// game.renderer.renderSession.roundPixels = true;
+// Phaser.Canvas.setImageRenderingCrisp(this.game.canvas)
 
     game.forceSingleUpdate = true;
     game.time.desiredFps = 144;
