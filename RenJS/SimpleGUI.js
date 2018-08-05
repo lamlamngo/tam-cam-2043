@@ -356,14 +356,7 @@ function SimpleGUI(meta){
         }
         var textObj = this.hud.text;
         textObj.text = "";
-        console.log("IS IT NEVER IN HERE");
-        // console.log(textObj.scale);
-        // textObj.smoothed = false;
-        // textObj.scaleMax= 1;
-        // textObj.x += 0.5;
-        // textObj.y += 0.5;
-        // textObj.x = Math.floor(textObj.x);
-        // textObj.y = Math.floor(textObj.y);
+        textObj.maxWidth = 320;
         var words = text.split("");
         var count = 0;
         var loop = setInterval(function(){
