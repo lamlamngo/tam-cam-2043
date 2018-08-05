@@ -258,14 +258,14 @@ RenJS.logicManager = new LogicManager();
 RenJS.storyManager = new StoryManager();
 
 game.state.update = function my_update() {
-  if (RenJS.cgsManager.cgs["train"]){
-    if (RenJS.cgsManager.cgs["train"].x == -0){
-        RenJS.cgsManager.cgs["train"].x = 1500;
-        RenJS.cgsManager.move("train");
-    } else {
-      console.log("no no");
-    }
-  } else{
-    console.log("no");
-  };
+  // if (RenJS.cgsManager.cgs["train"]){
+  //   if (RenJS.cgsManager.cgs["train"].x == -0){
+  //       RenJS.cgsManager.cgs["train"].x = 1500;
+  //       RenJS.cgsManager.move("train");
+  //   } else {
+  //     console.log("no no");
+  //   }
+  // } else{
+  //   console.log("no");
+  // };
 };

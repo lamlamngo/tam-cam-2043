@@ -1,6 +1,6 @@
 var defaults = {
     //name of the game
-    name: "RenJS-GAME",
+    name: "Tam Cam 2043",
 
     defaultTextStyle: {
         font: "bold 16pt FVF Femendo 08",
@@ -8,7 +8,7 @@ var defaults = {
         align: "left"
     },
     settings: {
-        textSpeed: 50,
+        textSpeed: 30,
         autoSpeed: 150,
         bgmv: 0.5,
         sfxv: 0.5,
@@ -28,7 +28,7 @@ var defaults = {
         CENTER: {x:globalConfig.w/2,y:globalConfig.h/2},
         RIGHT: {x:(globalConfig.w/6)*5,y:globalConfig.h},
         OUTRIGHT: {x:(globalConfig.w/6)*7,y:globalConfig.h},
-        START: {x: 1000, y:globalConfig.h/2},
+        START: {x: 800, y:globalConfig.h/2},
         END: {x: 300, y: 300}
     },
 

@@ -32,7 +32,7 @@ hud:
       x: 160
       y: 10
     textStyle:
-      font: 9pt FVF Femendo 08
+      font: 9pt 5SQUARED-PIXEL
       wordWrap: true
       wordWrapWidth: 320
       # fill: "#ac9393"
@@ -42,7 +42,7 @@ hud:
       x: 74
       y: 233
     textStyle:
-      font: 20pt FVF Femendo 08
+      font: 20pt 5SQUARED-PIXEL
       boundsAlignH: center
       boundsAlignV: middle
   ctc:
@@ -53,13 +53,13 @@ hud:
   choice:
     separation: 95
     textStyle:
-      font: 20pt FVF Femendo 08
+      font: 20pt 5SQUARED-PIXEL
       boundsAlignH: center
       boundsAlignV: middle
       fill: "#666666"
   interrupt:
     textStyle:
-      font: 20pt FVF Femendo 08
+      font: 20pt 5SQUARED-PIXEL
       boundsAlignH: center
       boundsAlignV: middle
       fill: "#664b4b"

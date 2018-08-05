@@ -1,13 +1,13 @@
 @font-face {
-  font-family: 'FVF Femendo 08';
-  src: url('FVF Femendo 08.ttf');
-  /* src: url('FVF Femendo 08.ttf').format('truetype'); */
+  font-family: '5SQUARED-PIXEL';
+  src: url('5SQUARED-PIXEL.ttf');
+  /* src: url('5SQUARED-PIXEL.ttf').format('truetype'); */
   font-weight: normal;
   font-style: normal;
 }
 
-.fontLoader {
+/* .fontLoader {
    position: absolute;
    left: -1000px;
    visibility: hidden;
-}
+} */

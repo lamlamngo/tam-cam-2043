@@ -30,7 +30,7 @@ function SimpleGUI(meta){
     this.init = function(){
         this.initHUD();
         this.initChoices();
-        
+
 
         this.menus = {};
         _.each(this.elements.menus,function(menu,name){
@@ -38,7 +38,7 @@ function SimpleGUI(meta){
         },this);
     }
 
-    
+
 
     this.getTextStyle = function(textStyle){
         return _.extend(_.clone(config.defaultTextStyle),textStyle);
@@ -71,25 +71,26 @@ function SimpleGUI(meta){
         // var textStyle = _.extend(config.defaultTextStyle,
         //     this.elements.hud.message.text,
         //     {wordWrap:true, wordWrapWidth:messageBox.w});
-        
+
         // textStyle.wordWrap = true;
         // textStyle.wordWrap = true;
-            
+
         // };
         // console.log(messageBox);
-        this.hud.text = game.add.text(messageBox.textPosition.x,messageBox.textPosition.y, "", style,this.hud.group);
+        // this.hud.text = game.add.text(messageBox.textPosition.x,messageBox.textPosition.y, "", style,this.hud.group);
+        this.hud.text = game.add.bitmapText(messageBox.textPosition.x,messageBox.textPosition.y, 'font', "", 8);
         this.hud.messageBox.addChild(this.hud.text);
 
         if (this.elements.hud.name){
             var name = this.elements.hud.name;
-            this.hud.nameBox = game.add.image(name.position.x,name.position.y,"nameBox",0,this.hud.group);            
+            this.hud.nameBox = game.add.image(name.position.x,name.position.y,"nameBox",0,this.hud.group);
             this.hud.messageBox.addChild(this.hud.nameBox);
             var nameStyle = this.getTextStyle(name.textStyle);
             this.hud.name = game.add.text(0,0, "", nameStyle,this.hud.group);
             if (name.textBounds){
                 this.hud.name.setTextBounds(name.textBounds.x, name.textBounds.y, name.textBounds.w, name.textBounds.h);
             } else {
-                this.hud.name.setTextBounds(0,0, this.hud.nameBox.width, this.hud.nameBox.height);   
+                this.hud.name.setTextBounds(0,0, this.hud.nameBox.width, this.hud.nameBox.height);
             }
             this.hud.nameBox.addChild(this.hud.name);
         }
@@ -103,7 +104,7 @@ function SimpleGUI(meta){
             }
             this.hud.messageBox.addChild(this.hud.ctc);
         }
-        this.HUDButtons = this.initButtons(this.elements.hud.buttons,this.hud.group);   
+        this.HUDButtons = this.initButtons(this.elements.hud.buttons,this.hud.group);
     }
 
     this.initButtons = function(buttonsMeta,group){
@@ -145,7 +146,7 @@ function SimpleGUI(meta){
             var sliderFull = game.add.image(slider.position.x,slider.position.y,slider.sprite,0,group);
             var sliderMask = game.add.graphics(slider.position.x,slider.position.y,group);
             sliderMask.beginFill(0xffffff);
-            
+
             var currentVal = config.settings[prop];
             var limits = config.limits[prop];
             var maskWidth = sliderFull.width*(currentVal-limits[0])/(limits[1]-limits[0]);
@@ -163,7 +164,7 @@ function SimpleGUI(meta){
         },this);
     }
 
-    
+
 
     this.sliderValueChanged = {
         textSpeed: function(newVal){
@@ -203,13 +204,13 @@ function SimpleGUI(meta){
             RenJS.gui.showMenu("settings");
         },
         return: function(){
-            RenJS.gui.hideMenu();  
+            RenJS.gui.hideMenu();
             RenJS.unpause();
         },
         mute: function (argument) {
             RenJS.audioManager.mute();
         }
-        
+
     }
 
     //show menu
@@ -222,33 +223,33 @@ function SimpleGUI(meta){
         if (this.menus[menu].music){
             var music = this.menus[menu].music;
             if (music.ready){
-                music.fadeIn(1000);    
+                music.fadeIn(1000);
             } else {
                setTimeout(function() {
                  music.fadeIn(1000);
-               }, 1000); 
+               }, 1000);
             }
-            
-        };        
+
+        };
     };
 
     //hide menu
-    this.hideMenu = function(menu){  
+    this.hideMenu = function(menu){
         var menu = this.currentMenu;
-        // console.log("hiding "+menu); 
+        // console.log("hiding "+menu);
         var tween = game.add.tween(this.menus[menu].group).to( {alpha:0}, 400);
         tween.onComplete.add(function(){
             this.menus[menu].group.visible = false;
             this.currentMenu = null;
             if (this.previousMenu){
-                this.showMenu(this.previousMenu);   
+                this.showMenu(this.previousMenu);
             }
         },this);
         if (this.menus[menu].music && this.menus[menu].music.ready){
             this.menus[menu].music.fadeOut(400);
-        };   
+        };
         tween.start();
-        
+
     }
 
     this.initChoices = function(type){
@@ -270,14 +271,14 @@ function SimpleGUI(meta){
             position = {x:game.world.centerX};
             position.y = game.world.centerY - (choices.length*this.elements.hud.choice.separation)/2;
             position.anchor = {x:0.5,y:0};
-        }       
+        }
 
         _.each(choices,function(choice,index){
             var y = position.y + this.elements.hud.choice.separation*index;
             var key = "choice";
             var frames = [0,1,0,1];
             var textStyle = this.hud.choices.textStyles.choice;
-            
+
             if (choice.interrupt){
                 key = "interrupt";
                 textStyle = this.hud.choices.textStyles.interrupt;
@@ -289,9 +290,9 @@ function SimpleGUI(meta){
                 RenJS.logicManager.choose(index,choice.choiceText);
             }, RenJS.logicManager, frames[0],frames[1],frames[2],frames[3],this.hud.choices.group);
             if (position.anchor){
-                chBox.anchor.set(position.anchor.x,position.anchor.y);    
+                chBox.anchor.set(position.anchor.x,position.anchor.y);
             }
-            
+
             var chText = game.add.text(0,0, choice.choiceText, textStyle);
             var textPosition = this.elements.hud.choice.textPosition;
             if (!textPosition){
@@ -338,13 +339,13 @@ function SimpleGUI(meta){
     //dialogue and text
     this.showText = function(text,title,colour,callback){
         // console.log("Showing");
-        if  (title && this.hud.nameBox) {            
+        if  (title && this.hud.nameBox) {
             this.hud.name.clearColors();
-            this.hud.name.addColor(colour,0);  
-            this.hud.nameBox.visible = true; 
+            this.hud.name.addColor(colour,0);
+            this.hud.nameBox.visible = true;
             this.hud.name.text = title;
         } else {
-            this.hud.nameBox.visible = false; 
+            this.hud.nameBox.visible = false;
         }
         if (RenJS.control.skipping || config.settings.textSpeed < 10){
             this.hud.text.text = text;
@@ -353,12 +354,20 @@ function SimpleGUI(meta){
             callback();
             return;
         }
-        var textObj = this.hud.text;        
+        var textObj = this.hud.text;
         textObj.text = "";
+        console.log("IS IT NEVER IN HERE");
+        // console.log(textObj.scale);
+        // textObj.smoothed = false;
+        // textObj.scaleMax= 1;
+        // textObj.x += 0.5;
+        // textObj.y += 0.5;
+        // textObj.x = Math.floor(textObj.x);
+        // textObj.y = Math.floor(textObj.y);
         var words = text.split("");
         var count = 0;
         var loop = setInterval(function(){
-                     
+
             textObj.text += (words[count]);
             count++;
             if (count >= words.length){
@@ -366,7 +375,7 @@ function SimpleGUI(meta){
                 // debugger;
                 RenJS.gui.showCTC();
                 callback();
-            }   
+            }
         }, config.settings.textSpeed);
         // this.hud.group.visible = true;
         this.hud.messageBox.visible = true;
@@ -376,9 +385,9 @@ function SimpleGUI(meta){
                 textObj.text = text;
                 RenJS.gui.showCTC();
                 callback();
-            });    
+            });
         }
-        
+
     }
 
     this.hideText = function(){
@@ -393,8 +402,8 @@ function SimpleGUI(meta){
                 this.hud.ctc.animations.stop();
             } else {
                 if (this.hud.ctc.tween){
-                    this.hud.ctc.tween.stop();        
-                }                
+                    this.hud.ctc.tween.stop();
+                }
             }
         }
     }

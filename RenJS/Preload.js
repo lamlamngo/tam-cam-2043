@@ -12,6 +12,7 @@ var preload = {
 
   preload: function () {
     this.load.setPreloadSprite(this.loadingBar);
+    game.load.bitmapFont('font', 'assets/gui/font.png', 'assets/gui/font.fnt');
     //load external libraries
     game.load.script('esprima',  'libs/esprima.js');
     game.load.script('yaml',  'libs/js-yaml.min.js');
@@ -50,7 +51,7 @@ var preload = {
         var text = jsyaml.load(game.cache.getText("story"+index));
         story = _.extend(story,text);
     });
-    RenJS.story = story;  
+    RenJS.story = story;
     //load and create the GUI
     var gui = jsyaml.load(game.cache.getText("guiConfig"));
     RenJS.gui = new SimpleGUI(gui);
@@ -133,12 +134,12 @@ var preloadStory = {
 }
 
 var init = {
-  create:function(){            
+  create:function(){
     RenJS.storyManager.setupStory();
     RenJS.gui.init();
     RenJS.initInput();
     RenJS.audioManager.init(function(){
-        RenJS.gui.showMenu("main");    
+        RenJS.gui.showMenu("main");
     });
   },
 
