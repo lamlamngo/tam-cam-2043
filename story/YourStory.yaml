@@ -2,14 +2,15 @@
 start:
   - wait: 3000
   - play intromusic:
-  - show intro-background: AT CENTER WITH FADE
-  - show train: AT START WITH CUT
-  - show black: AT CENTER WITH CUT
-  - show intro-city: AT CENTER WITH FUSION
+  - show intro-background and train and black and intro-city: AT CENTER WITH FADE
+  # - show train: AT START WITH CUT
+  # - show black: AT CENTER WITH CUT
+  # - show intro-city: AT CENTER WITH FUSION
   - ambient RAIN:
+  - move train:
+  - wait: 2000
   - text: Rạng sáng mùa đông năm ấy, khi cả thành phố đang chìm sâu trong giấc ngủ
   - dis:
-  - move train:
   - text: Một cặp song sinh cất tiếng khóc chào đời.
   - dis:
 

@@ -20,12 +20,9 @@ RenJS.ambient = {
             emitter.minRotation = options.rotation[0];
             emitter.maxRotation = options.rotation[1];
         }
-        console.log("WITNESS ME");
-        console.log(emitter.area);
         emitter.area.x = 160;
         emitter.area.y = -32;
         emitter.area.width = 319;
-        console.log(emitter.area);
         RenJS.ambient.emitters.push(emitter);
     },
     BGS: function(sound){

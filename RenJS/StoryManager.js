@@ -75,7 +75,17 @@ function StoryManager(){
                 actor = str[0];
             } else {
                 mainAction = str[0];
-                actor = str[1];
+                if (key.includes("and")) {
+                  var actor = new Array(str.length/2);
+                  var counter = 0;
+                  for (var i = 1; i < str.length; i++) {
+                    if (i % 2 == 1) {
+                      actor[counter++] = str[i];
+                    }
+                  }
+                } else {
+                  actor = str[1];
+                }
             }
             var actorType = RenJS.storyManager.getActorType(actor);
             //parse WITH and AT
@@ -130,8 +140,20 @@ function StoryManager(){
                     RenJS.resolve();
                     break;
                 case "show" :
-                    action.manager.show(actor,action.transition,action);
-                    break;
+                    if (!Array.isArray(actor)) {
+                      action.manager.show(actor,action.transition,action);
+                      break;
+                    } else {
+                      for (var i = 0; i < actor.length; i++) {
+                        if (actor[i] == "train"){
+                            action.position = config.positions["START"];
+                            action.manager.show(actor[i], action.transition, action);
+                        } else {
+                            action.position = config.positions["CENTER"];
+                            action.manager.show(actor[i], action.transition, action);
+                        }
+                      }
+                    }
                 case "hide" :
                     action.manager.hide(actor,action.transition);
                     break;

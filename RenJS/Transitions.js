@@ -13,7 +13,7 @@ RenJS.transitions = {
         if (!from){
             RenJS.transitions.FADEIN(to,position,scaleX);
             return;
-        } 
+        }
         if (!to){
             RenJS.transitions.FADEOUT(from);
             return;
@@ -23,20 +23,20 @@ RenJS.transitions = {
                 setNewProperties(to,position,scaleX);
             }},
             {sprite:to,tweenables:{alpha:1},callback:RenJS.resolve}
-        ],config.fadetime);               
+        ],config.fadetime);
     },
     FADEOUT: function(from){
         RenJS.tweenManager.tween(from,{ alpha: 0 },RenJS.resolve,config.fadetime,true);
     },
     FADEIN: function(to,position,scaleX){
         setNewProperties(to,position,scaleX);
-        RenJS.tweenManager.tween(to,{ alpha: 1 },RenJS.resolve,config.fadetime,true);        
+        RenJS.tweenManager.tween(to,{ alpha: 1 },RenJS.resolve,config.fadetime,true);
     },
     FUSION: function(from,to,position,scaleX,group){
         if (!from || !to){
             RenJS.transitions.FADE(from,to,position);
             return;
-        }   
+        }
         if (group) {
             group.bringToTop(to);
         }
@@ -54,7 +54,7 @@ RenJS.transitions = {
         if (!from || !to){
             RenJS.transitions.CUT(from,to,position);
             return;
-        } 
+        }
         RenJS.tweenManager.tween(from,{ x:position.x,y:position.y },function(){
             setNewProperties(to,position,scaleX);
             from.alpha = 0;
@@ -101,4 +101,3 @@ function setNewProperties(sprite,position,scaleX){
         sprite.scale.x = scaleX;
     }
 }
-
