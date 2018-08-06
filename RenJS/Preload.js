@@ -4,14 +4,15 @@ var preload = {
     //TODO: LOAD RENJS OWN SPLASH SCREEN
     this.splash = game.add.sprite(game.world.centerX, game.world.centerY, 'splash');
     this.splash.anchor.set(0.5);
-    if (globalConfig.splash.loadingBar) {
-        var position = globalConfig.splash.loadingBar.position;
-        this.loadingBar = game.add.sprite(position.x,position.y , "loading");
-    }
+    // if (globalConfig.splash.loadingBar) {
+    //     var position = globalConfig.splash.loadingBar.position;
+    //     this.loadingBar = game.add.sprite(position.x,position.y , "loading");
+    // }
+
   },
 
   preload: function () {
-    this.load.setPreloadSprite(this.loadingBar);
+    // this.load.setPreloadSprite(this.loadingBar);
     game.load.bitmapFont('font', 'assets/gui/font.png', 'assets/gui/font.fnt');
     //load external libraries
     game.load.script('esprima',  'libs/esprima.js');
@@ -40,10 +41,17 @@ var preload = {
     for (var i = globalConfig.storyText.length - 1; i >= 0; i--) {
       game.load.text("story"+i, globalConfig.storyText[i]);
     };
+
+    console.log(game.load);
+
+    // game.add.bitmapText(100,100, 'font', "TESTING", 8);
   },
 
   create: function () {
     //load the setup
+
+    game.load.onFileComplete.add(fileComplete, this);
+    // game.load.onLoadComplete.add(loadComplete, this);
     RenJS.setup = jsyaml.load(game.cache.getText("storySetup"));
     //load the story text
     var story = {};
@@ -64,6 +72,10 @@ var preload = {
     game.state.add('preloadStory', preloadStory);
     game.state.start('preloadStory');
   }
+}
+
+function fileComplete(progress, cacheKey, success, totalLoaded, totalFiles) {
+  console.log(progress);
 }
 
 var preloadStory = {
