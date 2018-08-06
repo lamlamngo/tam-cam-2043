@@ -20,9 +20,7 @@ RenJS.ambient = {
             emitter.minRotation = options.rotation[0];
             emitter.maxRotation = options.rotation[1];
         }
-        emitter.area.x = 160;
-        emitter.area.y = -32;
-        emitter.area.width = 319;
+        // emitter.height = 180;
         RenJS.ambient.emitters.push(emitter);
     },
     BGS: function(sound){
@@ -66,15 +64,22 @@ RenJS.ambient = {
     RAIN: function() {
         RenJS.audioManager.play("rain","bgs",true,"FADE");
         RenJS.ambient.addEmitter({
-            maxParticles: 400,
+            maxParticles: 800,
             sprite:"rain",
             frames: [0],
             scale: [0.1,0.5],
             speed: {y:[300,500],x:[-5,5]},
             rotation: [0,0]
         });
-        RenJS.ambient.emitters[0].start(false, 1600, 5,0);
+        RenJS.ambient.emitters[0].start(false, 350, 5,0);
         RenJS.ambient.maxLifespan = 1600;
+        RenJS.ambient.emitters[0].area.x = 160;
+        RenJS.ambient.emitters[0].area.y = 90;
+        RenJS.ambient.emitters[0].area.width = 319;
+        RenJS.ambient.emitters[0].area.height = 1;
+        RenJS.ambient.emitters[0].emitY = 90;
+        RenJS.ambient.emitters[0].frequency = 1;
+        console.log(RenJS.ambient.emitters[0].frequency);
         RenJS.resolve();
     },
     SAKURA: function(){
