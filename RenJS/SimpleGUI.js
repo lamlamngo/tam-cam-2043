@@ -118,6 +118,11 @@ function SimpleGUI(meta){
             }
             buttons[action] = game.add.button(btn.position.x,btn.position.y,btn.sprite,this.buttonActions[action],
                 this,btn.frames[0],btn.frames[1],btn.frames[2],btn.frames[3],group);
+            buttons[action].alpha = 0;
+
+            var tween = game.add.tween(buttons[action]);
+
+            tween.to({ alpha: 1 }, 10000, 'Linear', true, 0);
         },this);
         return buttons;
     }
@@ -129,7 +134,13 @@ function SimpleGUI(meta){
         // this.menus[name].group.alpha = 0;
         this.menus[name].group.visible = false;
 
-        this.menus[name].background = game.add.image(0,0,name+"Background",0,this.menus[name].group);
+        this.menus[name].background = game.add.sprite(0,0,name+"Background",0,this.menus[name].group);
+        this.menus[name].background.alpha = 0;
+
+        var tween = game.add.tween(this.menus[name].background);
+
+        tween.to({ alpha: 1 }, 10000, 'Linear', true, 0);
+
         if (menu.music && !config.settings.muted){
             this.menus[name].music = game.add.audio(menu.music);
             this.menus[name].music.onDecoded.add(function(){
