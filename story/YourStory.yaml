@@ -23,7 +23,7 @@ start:
   - text: Đứa trẻ ra trước, ít nói, ít cười, chỉ biết nhìn em mình lớn lên trong vòng tay yêu thương của cha mẹ từ đằng xa.
   - hide intro-background-2: WITH FADE
 
-  - show intro-background-3: WITH FADE
+  - show intro-background-3: AT CENTER WITH FADE
   - wait : 2000
   - text: Tấm luôn cô độc, nhưng Cám và cha mẹ không ai đoái hoài.
   - hide intro-background-3: WITH FADE

@@ -80,7 +80,7 @@ function CGSManager(){
       var tweenables = {};
       tweenables.alpha = 1;
       tweenables.x = -0;
-      tweenables.y = globalConfig.h/2;
+      tweenables.y = globalConfig.h/2 - 25;
       RenJS.tweenManager.tween(this.cgs[name],tweenables,RenJS.resolve,10000,true);
     }
 }
