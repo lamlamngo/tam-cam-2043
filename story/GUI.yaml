@@ -64,26 +64,26 @@ hud:
       boundsAlignV: middle
       fill: "#664b4b"
   buttons:
-    # auto:
-    #   position:
-    #     x: 500
-    #     y: 272
-    #   sprite: qmAutoButton
-    # skip:
-    #   position:
-    #     x: 500
-    #     y: 308
-    #   sprite: qmSkipButton
-    # save:
-    #   position:
-    #     x: 549
-    #     y: 272
-    #   sprite: qmSaveButton
-    # settings:
-    #   position:
-    #     x: 549
-    #     y: 308
-    #   sprite: qmSettingsButton
+    auto:
+      position:
+        x: 505
+        y: 272
+      sprite: qmAutoButton
+    skip:
+      position:
+        x: 500
+        y: 308
+      sprite: qmSkipButton
+    save:
+      position:
+        x: 549
+        y: 272
+      sprite: qmSaveButton
+    settings:
+      position:
+        x: 545
+        y: 302
+      sprite: qmSettingsButton
     # mute: qmMuteButton 1175 60
 menus:
   main:

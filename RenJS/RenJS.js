@@ -49,9 +49,15 @@ var RenJS = {
     },
 
     auto: function(){
-        config.skiptime = 1000;
-        RenJS.control.auto = true;
-        console.log("autoplaying");
+        if (RenJS.control.auto) {
+          config.skipTime = 50;
+          RenJS.control.auto = false;
+          console.log("stop autoplaying");
+        } else {
+          config.skiptime = 1000;
+          RenJS.control.auto = true;
+          console.log("autoplaying");
+        }
         // RenJS.resolve();
     },
 
