@@ -106,11 +106,22 @@ menus:
         sprite: settingButton
   settings:
     buttons:
+      start:
+        position:
+          x: 90
+          y: 277
+        sprite: startButton
+      load:
+        position:
+          x: 273
+          y: 277
+        sprite: loadButton
       return:
         position:
-          x: 566
-          y: 7
+          x: 456
+          y: 277
         sprite: returnButton
+
     sliders:
       textSpeed:
         position:
