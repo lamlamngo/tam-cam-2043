@@ -32,3 +32,4 @@ start:
   - effect SHOWTITLE:
     title:
     subtitle: Chương 1
+  - show living-room: AT CENTER WITH FADE

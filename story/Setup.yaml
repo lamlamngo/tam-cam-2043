@@ -13,6 +13,7 @@ cgs:
   intro-background: assets/backgrounds/intro_background.png
   intro-city: assets/backgrounds/intro_01.png
   train: assets/objects/train.png
+  living-room: assets/backgrounds/livingroom.png
 music:
   mainmenu: assets/audio/mainmenu.mp3
   intromusic: assets/audio/intromusic.mp3
