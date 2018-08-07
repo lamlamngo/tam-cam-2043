@@ -3,11 +3,20 @@ var RenJS = {
     pause: function(){
         RenJS.control.paused = true;
         RenJS.gui.hideHUD();
+
+        for (var i = 0; i < RenJS.ambient.emitters.length; i++){
+          RenJS.ambient.emitters[i].on = false;
+        }
     },
 
     unpause: function(){
         RenJS.control.paused = false;
         RenJS.gui.showHUD();
+
+        for (var i = 0; i < RenJS.ambient.emitters.length; i++){
+          RenJS.ambient.emitters[i].on = true;
+        }
+
         RenJS.storyManager.interpret();
     },
 
