@@ -71,15 +71,13 @@ RenJS.ambient = {
             speed: {y:[300,500],x:[-5,5]},
             rotation: [0,0]
         });
-        RenJS.ambient.emitters[0].start(false, 350, 5,0);
-        RenJS.ambient.maxLifespan = 1600;
-        RenJS.ambient.emitters[0].area.x = 160;
-        RenJS.ambient.emitters[0].area.y = 65;
+        RenJS.ambient.emitters[0].area.x = 159;
+        RenJS.ambient.emitters[0].area.y = 58;
         RenJS.ambient.emitters[0].area.width = 319;
         RenJS.ambient.emitters[0].area.height = 1;
-        RenJS.ambient.emitters[0].emitY = 65;
+        RenJS.ambient.emitters[0].emitY = 59;
         RenJS.ambient.emitters[0].frequency = 1;
-        console.log(RenJS.ambient.emitters[0].frequency);
+        RenJS.ambient.emitters[0].start(false, 400, 5,0);
         RenJS.resolve();
     },
     SAKURA: function(){
