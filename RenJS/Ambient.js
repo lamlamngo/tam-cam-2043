@@ -75,9 +75,10 @@ RenJS.ambient = {
         RenJS.ambient.emitters[0].area.y = 58;
         RenJS.ambient.emitters[0].area.width = 319;
         RenJS.ambient.emitters[0].area.height = 1;
-        RenJS.ambient.emitters[0].emitY = 59;
+        RenJS.ambient.emitters[0].emitY = 57;
         RenJS.ambient.emitters[0].frequency = 1;
         RenJS.ambient.emitters[0].start(false, 400, 5,0);
+        RenJS.ambient.emitters[0].lifespan = 400;
         RenJS.resolve();
     },
     SAKURA: function(){
