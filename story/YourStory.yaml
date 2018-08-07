@@ -32,4 +32,5 @@ start:
   - effect SHOWTITLE:
     title:
     subtitle: Chương 1
-  - show living-room: AT CENTER WITH FADE
+  - show living-room: AT CENTERREAL WITH FADE
+  - text: Mình đang thử xem chữ chạy thế nào và có mượt không?

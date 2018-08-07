@@ -26,6 +26,7 @@ var defaults = {
         LEFT: {x:globalConfig.w/6,y:globalConfig.h},
         OUTLEFT: {x:-(globalConfig.w/6),y:globalConfig.h},
         CENTER: {x:globalConfig.w/2,y:globalConfig.h/2 - 25},
+        CENTERREAL: {x:globalConfig.w/2,y:globalConfig.h/2},
         RIGHT: {x:(globalConfig.w/6)*5,y:globalConfig.h},
         OUTRIGHT: {x:(globalConfig.w/6)*7,y:globalConfig.h},
         START: {x: 1000, y:globalConfig.h/2 - 25},

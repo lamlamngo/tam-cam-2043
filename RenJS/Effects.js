@@ -70,6 +70,13 @@ RenJS.effects = {
             }, delay: RenJS.control.fadetime*2}
         ],config.fadetime*2);
 
+        RenJS.gui.hud.messageBox.destroy();
+        RenJS.gui.initHUD("real");
+        RenJS.gui.hud.messageBox.x += 45;
+        RenJS.gui.hud.messageBox.y += 16;
+        RenJS.gui.hud.text.x = 10;
+        RenJS.gui.showHUD();
+
     },
     FLASHIMAGE: function(image){
         var image = game.add.sprite(game.world.centerX,game.world.centerY,image);

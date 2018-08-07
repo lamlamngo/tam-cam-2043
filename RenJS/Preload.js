@@ -36,6 +36,7 @@ var preload = {
     game.load.script('CustomContent',  'RenJS/CustomContent.js');
     //load Story Files
     loadStyle(globalConfig.fonts);
+    game.load.image("real", "assets/gui/text_box.png");
     game.load.text("guiConfig", globalConfig.guiConfig);
     game.load.text("storySetup", globalConfig.storySetup);
     for (var i = globalConfig.storyText.length - 1; i >= 0; i--) {

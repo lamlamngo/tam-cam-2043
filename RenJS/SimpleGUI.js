@@ -28,7 +28,7 @@ function SimpleGUI(meta){
     // }
 
     this.init = function(){
-        this.initHUD();
+        this.initHUD("messageBox");
         this.initChoices();
 
 
@@ -44,7 +44,7 @@ function SimpleGUI(meta){
         return _.extend(_.clone(config.defaultTextStyle),textStyle);
     }
 
-    this.initHUD = function(){
+    this.initHUD = function(name){
         this.hud = {
             group: game.add.group()
         };
@@ -61,7 +61,9 @@ function SimpleGUI(meta){
         },this);
         this.hud.group.visible = false;
         var messageBox = this.elements.hud.message;
-        this.hud.messageBox = game.add.image(messageBox.position.x,messageBox.position.y,"messageBox",0,this.hud.group);
+        this.hud.messageBox = game.add.image(messageBox.position.x,messageBox.position.y,name,0,this.hud.group);
+        this.hud.messageBox.alpha = 0.7;
+        // this.hud.messageBox.addChild(this.hud.secondLayer);
         var style = this.getTextStyle(messageBox.textStyle);
 
         // var messageBox = this.getSpriteInfo(this.elements.hud.message.box);
@@ -83,7 +85,7 @@ function SimpleGUI(meta){
 
         if (this.elements.hud.name){
             var name = this.elements.hud.name;
-            this.hud.nameBox = game.add.image(name.position.x,name.position.y,"nameBox",0,this.hud.group);
+            this.hud.nameBox = game.add.image(name.position.x,name.position.y,"messageBox",0,this.hud.group);
             this.hud.messageBox.addChild(this.hud.nameBox);
             var nameStyle = this.getTextStyle(name.textStyle);
             this.hud.name = game.add.text(0,0, "", nameStyle,this.hud.group);
@@ -350,6 +352,17 @@ function SimpleGUI(meta){
     //dialogue and text
     this.showText = function(text,title,colour,callback){
         // console.log("Showing");
+        if (RenJS.doneIntro) {
+          console.log("IN HERE");
+          this.hud.messageBox = game.add.image(messageBox.position.x,messageBox.position.y,"real",0,this.hud.group);
+          this.hud.messageBox.addChild(this.hud.text);
+          this.hud.messageBox.addChild(this.hud.nameBox);
+          this.hud.nameBox.addChild(this.hud.name);
+          this.hud.messageBox.addChild(this.hud.ctc);
+          this.HUDButtons = this.initButtons(this.elements.hud.buttons,this.hud.group);
+          RenJS.doneIntro = false;
+        }
+
         if  (title && this.hud.nameBox) {
             this.hud.name.clearColors();
             this.hud.name.addColor(colour,0);
@@ -360,7 +373,8 @@ function SimpleGUI(meta){
         }
         if (RenJS.control.skipping || config.settings.textSpeed < 10){
             this.hud.text.text = text;
-            this.hud.messageBox.visible = true;
+            this.hud.messageBox.visible = false;
+            this.hud.text.visible = true;
             RenJS.gui.showCTC();
             callback();
             return;
