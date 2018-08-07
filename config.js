@@ -4,7 +4,7 @@ var globalConfig = {
   mode: "AUTO",
   scaleMode: "USER_SCALE", //SHOW_ALL, EXACT_FIT
   splash: { //The "Loading" page for your game
-    loadingScreen: "assets/gui/loading_background.png", //splash background
+    loadingScreen: "assets/gui/logo.png", //splash background
     loadingBar: {
       fullBar: "assets/gui/loading_bars.png",
       position: {x:0,y:0}

@@ -81,7 +81,7 @@ function fileComplete(progress, cacheKey, success, totalLoaded, totalFiles) {
 
 var preloadStory = {
   init: function () {
-    this.splash = game.add.sprite(game.world.centerX, game.world.centerY, 'splash');
+    this.splash = game.add.sprite(game.world.centerX, game.world.centerY - 20, 'splash');
     this.splash.anchor.set(0.5);
     if (globalConfig.splash.loadingBar) {
         var position = globalConfig.splash.loadingBar.position;

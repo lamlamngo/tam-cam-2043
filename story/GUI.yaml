@@ -2,7 +2,7 @@ assets:
   fonts:
     - font
   images:
-    mainBackground: assets/gui/main_menu.png
+    mainBackground: assets/gui/logo.png
     settingsBackground: assets/gui/settings.png
     sliderFull: assets/gui/slider.png
     messageBox:  assets/gui/text_box_2.png

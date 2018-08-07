@@ -136,7 +136,7 @@ function SimpleGUI(meta){
         // this.menus[name].group.alpha = 0;
         this.menus[name].group.visible = false;
 
-        this.menus[name].background = game.add.image(0,0,name+"Background",0,this.menus[name].group);
+        this.menus[name].background = game.add.image(180, 0,name+"Background",0,this.menus[name].group);
         // this.menus[name].background.alpha = 1;
 
         // var tween = game.add.tween(this.menus[name].background);
