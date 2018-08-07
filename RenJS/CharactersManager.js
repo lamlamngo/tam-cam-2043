@@ -34,7 +34,6 @@ function CharactersManager(){
         var ch = this.characters[name];
         var oldLook = ch.currentLook;
         ch.currentLook = props.look ? ch.looks[props.look] : ch.looks.normal;
-
         if (!props.position){
             props.position = (oldLook != null) ? {x:oldLook.x,y:oldLook.y} : config.positions.CENTER;
         }

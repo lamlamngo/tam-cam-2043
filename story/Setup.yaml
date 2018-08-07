@@ -1,11 +1,16 @@
 backgrounds:
+  living-room: assets/backgrounds/livingroom.png
 characters:
   Tam:
     displayName: Tam
     speechColour: "#ca90cf"
     looks:
-      normal: assets/characters/tam.png
-      happy: assets/characters/tam.png
+      normal: assets/characters/tam_normal.png
+  Cam:
+    displayName: Cam
+    speechColour: "#d5e6e7"
+    looks:
+      normal: assets/characters/cam_normal.png
 cgs:
   black: assets/backgrounds/black.png
   intro-background-2: assets/backgrounds/nursery.png
@@ -13,7 +18,6 @@ cgs:
   intro-background: assets/backgrounds/intro_background.png
   intro-city: assets/backgrounds/intro_01.png
   train: assets/objects/train.png
-  living-room: assets/backgrounds/livingroom.png
 music:
   mainmenu: assets/audio/mainmenu.mp3
   intromusic: assets/audio/intromusic.mp3

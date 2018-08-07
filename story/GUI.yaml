@@ -6,7 +6,7 @@ assets:
     settingsBackground: assets/gui/settings.png
     sliderFull: assets/gui/slider.png
     messageBox:  assets/gui/text_box_2.png
-    nameBox:  assets/gui/name_box.png
+    nameBox: assets/gui/name_box.png
     ctc: assets/gui/ctc.png
     startButton: assets/gui/newgame_button.png
     loadButton: assets/gui/load_button.png
@@ -32,17 +32,17 @@ hud:
       x: 160
       y: 10
     textStyle:
-      font: 9pt 5SQUARED-PIXEL
+      font: 10pt FVF Femendo 08
       wordWrap: true
       wordWrapWidth: 320
       # fill: "#ac9393"
       fill: "#ffffff"
   name:
     position:
-      x: 74
-      y: 233
+      x: 20
+      y: -20
     textStyle:
-      font: 20pt 5SQUARED-PIXEL
+      font: 9pt FVF Femendo 08
       boundsAlignH: center
       boundsAlignV: middle
   ctc:
@@ -53,13 +53,13 @@ hud:
   choice:
     separation: 95
     textStyle:
-      font: 20pt 5SQUARED-PIXEL
+      font: 20pt FVF Femendo 08
       boundsAlignH: center
       boundsAlignV: middle
       fill: "#666666"
   interrupt:
     textStyle:
-      font: 20pt 5SQUARED-PIXEL
+      font: 20pt FVF Femendo 08
       boundsAlignH: center
       boundsAlignV: middle
       fill: "#664b4b"

@@ -23,11 +23,11 @@ var defaults = {
     },
 
     positions : {
-        LEFT: {x:globalConfig.w/6,y:globalConfig.h},
+        LEFT: {x:globalConfig.w/6,y:globalConfig.h/6},
         OUTLEFT: {x:-(globalConfig.w/6),y:globalConfig.h},
         CENTER: {x:globalConfig.w/2,y:globalConfig.h/2 - 25},
         CENTERREAL: {x:globalConfig.w/2,y:globalConfig.h/2},
-        RIGHT: {x:(globalConfig.w/6)*5,y:globalConfig.h},
+        RIGHT: {x:(globalConfig.w/6)*5,y:globalConfig.h/2},
         OUTRIGHT: {x:(globalConfig.w/6)*7,y:globalConfig.h},
         START: {x: 1000, y:globalConfig.h/2 - 25},
         END: {x: 300, y: 300}

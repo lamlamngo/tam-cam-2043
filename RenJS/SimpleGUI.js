@@ -85,7 +85,7 @@ function SimpleGUI(meta){
 
         if (this.elements.hud.name){
             var name = this.elements.hud.name;
-            this.hud.nameBox = game.add.image(name.position.x,name.position.y,"messageBox",0,this.hud.group);
+            this.hud.nameBox = game.add.image(name.position.x,name.position.y,"nameBox",0,this.hud.group);
             this.hud.messageBox.addChild(this.hud.nameBox);
             var nameStyle = this.getTextStyle(name.textStyle);
             this.hud.name = game.add.text(0,0, "", nameStyle,this.hud.group);
@@ -351,23 +351,12 @@ function SimpleGUI(meta){
 
     //dialogue and text
     this.showText = function(text,title,colour,callback){
-        // console.log("Showing");
-        if (RenJS.doneIntro) {
-          console.log("IN HERE");
-          this.hud.messageBox = game.add.image(messageBox.position.x,messageBox.position.y,"real",0,this.hud.group);
-          this.hud.messageBox.addChild(this.hud.text);
-          this.hud.messageBox.addChild(this.hud.nameBox);
-          this.hud.nameBox.addChild(this.hud.name);
-          this.hud.messageBox.addChild(this.hud.ctc);
-          this.HUDButtons = this.initButtons(this.elements.hud.buttons,this.hud.group);
-          RenJS.doneIntro = false;
-        }
-
         if  (title && this.hud.nameBox) {
             this.hud.name.clearColors();
             this.hud.name.addColor(colour,0);
             this.hud.nameBox.visible = true;
             this.hud.name.text = title;
+            console.log(this.hud.nameBox.x);
         } else {
             this.hud.nameBox.visible = false;
         }

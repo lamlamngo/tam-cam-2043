@@ -32,5 +32,11 @@ start:
   - effect SHOWTITLE:
     title:
     subtitle: Chương 1
+  - hide black:
   - show living-room: AT CENTERREAL WITH FADE
   - text: Mình đang thử xem chữ chạy thế nào và có mượt không?
+  - show Tam: normal AT CENTER WITH FADE
+  - Tam says: Bạn Nguyễn Hà Thùy Linh Vẽ Minh
+  - hide Tam: WITH FADE
+  - show Cam: normal AT CENTER WITH FADE
+  - Cam says: Bạn nguyễn Hà thùy Linh cũng vẽ mình.
