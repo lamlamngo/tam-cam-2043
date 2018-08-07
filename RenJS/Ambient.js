@@ -30,7 +30,11 @@ RenJS.ambient = {
         }
     },
     CLEAR: function(){
+      for (var i = 0; i < RenJS.ambient.emitters.length; i++){
+        RenJS.ambient.emitters[i].on = false;
+      }
         if (RenJS.ambient.maxLifespan){
+          console.log("in here");
             _.each(RenJS.ambient.emitters,function(emitter){
                 emitter.on = false;
             });
@@ -49,6 +53,8 @@ RenJS.ambient = {
         });
         RenJS.ambient.clearFunctions = [];
         RenJS.audioManager.stop("bgs","FADE");
+
+
         RenJS.resolve();
     },
     STATIC: function(){
