@@ -34,7 +34,7 @@ start:
   - show living-room: AT CENTERREAL WITH FADE
   - text: Mình đang thử xem chữ chạy thế nào và có mượt không?
   - show Tam: normal AT CENTER WITH FADE
-  - Tam says: Bạn Nguyễn Hà Thùy Linh Vẽ Minh
+  - Tam says: Bạn Nguyễn Hà Thùy Linh vẽ mình.
   - hide Tam: WITH FADE
   - show Cam: normal AT CENTER WITH FADE
   - Cam says: Bạn nguyễn Hà thùy Linh cũng vẽ mình.

@@ -2,12 +2,12 @@ backgrounds:
   living-room: assets/backgrounds/livingroom.png
 characters:
   Tam:
-    displayName: Tam
+    displayName: Tấm
     speechColour: "#ca90cf"
     looks:
       normal: assets/characters/tam_normal.png
   Cam:
-    displayName: Cam
+    displayName: Cám
     speechColour: "#d5e6e7"
     looks:
       normal: assets/characters/cam_normal.png
