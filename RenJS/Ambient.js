@@ -34,7 +34,6 @@ RenJS.ambient = {
         RenJS.ambient.emitters[i].on = false;
       }
         if (RenJS.ambient.maxLifespan){
-          console.log("in here");
             _.each(RenJS.ambient.emitters,function(emitter){
                 emitter.on = false;
             });
