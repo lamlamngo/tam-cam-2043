@@ -272,7 +272,22 @@ RenJS.tweenManager = new TweenManager();
 RenJS.logicManager = new LogicManager();
 RenJS.storyManager = new StoryManager();
 
+RenJS.sceneChange = false;
+RenJS.sceneStart = false;
+
 game.state.update = function my_update() {
+  if (RenJS.sceneChange) {
+    if (RenJS.cgsManager.cgs["train"]) {
+      RenJS.cgsManager.cgs["train"].visible = false;
+    }
+    RenJS.sceneChange = false;
+  }
+
+  if (RenJS.sceneStart) {
+    RenJS.cgsManager.move("train");
+    RenJS.waitTimeout(3000);
+    RenJS.sceneStart = false;
+  }
   // if (RenJS.cgsManager.cgs["train"]){
   //   if (RenJS.cgsManager.cgs["train"].x == -0){
   //       RenJS.cgsManager.cgs["train"].x = 1500;

@@ -163,6 +163,12 @@ function StoryManager(){
                       }
                     }
                     break;
+                case "scene-change-1":
+                    RenJS.sceneChange = true;
+                    break;
+                case "scene-start-1":
+                    RenJS.sceneStart = true;
+                    break;
                 case "say" :
                     RenJS.textManager.say(actor,params);
                     break;

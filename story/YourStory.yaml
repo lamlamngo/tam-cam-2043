@@ -7,14 +7,13 @@ start:
   # - show black: AT CENTER WITH CUT
   # - show intro-city: AT CENTER WITH FUSION
   - ambient RAIN:
-  - move train:
-  - hide train:
+  - scene-start-1:
   - text: Rạng sáng mùa đông năm ấy, khi cả thành phố đang chìm sâu trong giấc ngủ
   - dis:
   - text: Một cặp song sinh cất tiếng khóc chào đời.
   - dis:
-
   - hide intro-city and intro-background: WITH FADE
+  - scene-change-1:
   # - hide intro-background: WITH FADE
   # - hide intro-city: WITH FADETOBLACK
   - ambient CLEAR:
