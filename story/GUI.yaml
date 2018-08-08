@@ -42,7 +42,7 @@ hud:
       x: 20
       y: -20
     textStyle:
-      font: 9pt FVF Femendo 08
+      font: 8pt FVF Femendo 08
       boundsAlignH: center
       boundsAlignV: middle
   ctc:

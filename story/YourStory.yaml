@@ -16,13 +16,13 @@ start:
   - scene-change-1:
   - ambient CLEAR:
   - show intro-background-2: AT CENTER WITH FADE
-  - wait : 2000
+  # - wait : 2000
   - text: Tuy rằng sinh đôi, nhưng đứa trẻ ra sau khóc nhiều hơn, được cha mẹ chăm sóc nhiều hơn.
   - text: Đứa trẻ ra trước, ít nói, ít cười, chỉ biết nhìn em mình lớn lên trong vòng tay yêu thương của cha mẹ từ đằng xa.
   - hide intro-background-2: WITH FADE
 
   - show intro-background-3: AT CENTER WITH FADE
-  - wait : 2000
+  # - wait : 2000
   - text: Tấm luôn cô độc, nhưng Cám và cha mẹ không ai đoái hoài.
   - hide intro-background-3: WITH FADE
   - text: Một ngày, cuộc đời Tấm sẽ thay đổi.
@@ -33,8 +33,8 @@ start:
   - hide black:
   - show living-room: AT CENTERREAL WITH FADE
   - text: Mình đang thử xem chữ chạy thế nào và có mượt không?
-  - show Tam: normal AT CENTER WITH FADE
+  - show Tam: normal AT LEFT WITH FADE
   - Tam says: Bạn Nguyễn Hà Thùy Linh vẽ mình.
   - hide Tam: WITH FADE
-  - show Cam: normal AT CENTER WITH FADE
+  - show Cam: normal AT RIGHT WITH FADE
   - Cam says: Bạn nguyễn Hà thùy Linh cũng vẽ mình.

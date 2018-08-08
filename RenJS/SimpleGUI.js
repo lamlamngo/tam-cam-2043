@@ -94,6 +94,7 @@ function SimpleGUI(meta){
             } else {
                 this.hud.name.setTextBounds(0,0, this.hud.nameBox.width, this.hud.nameBox.height);
             }
+            this.hud.name.y += 2;
             this.hud.nameBox.addChild(this.hud.name);
         }
         if (this.elements.hud.ctc) {

@@ -278,7 +278,7 @@ RenJS.sceneStart = false;
 game.state.update = function my_update() {
   if (RenJS.sceneStart) {
     RenJS.cgsManager.move("train");
-    RenJS.waitTimeout(3000);
+    RenJS.waitTimeout(500);
     RenJS.sceneStart = false;
   }
   // if (RenJS.cgsManager.cgs["train"]){
