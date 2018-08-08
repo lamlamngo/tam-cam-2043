@@ -164,7 +164,9 @@ function StoryManager(){
                     }
                     break;
                 case "scene-change-1":
-                    RenJS.sceneChange = true;
+                    if (RenJS.cgsManager.cgs["train"]) {
+                      RenJS.cgsManager.cgs["train"].visible = false;
+                    }
                     break;
                 case "scene-start-1":
                     RenJS.sceneStart = true;
