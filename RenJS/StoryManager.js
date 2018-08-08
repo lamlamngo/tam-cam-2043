@@ -166,10 +166,26 @@ function StoryManager(){
                 case "scene-change-1":
                     if (RenJS.cgsManager.cgs["train"]) {
                       RenJS.cgsManager.cgs["train"].visible = false;
+
+                      for (var i = 0; i < RenJS.tweenManager.current.length; i++) {
+                        console.log(RenJS.tweenManager.current[i].target.key);
+                        console.log("WHY ARENT YOU WORKING");
+                        if (RenJS.tweenManager.current[i].target.key == "train") {
+                          RenJS.tweenManager.current[i].stop(false);
+                          _.each(RenJS.tweenManager.current[i].tweenables,function (value,property) {
+                              RenJS.tweenManager.current[i].target[property] = value;
+                          });
+                          if (RenJS.tweenManager.current[i].callbackOnComplete){
+                              RenJS.tweenManager.current[i].callbackOnComplete();
+                          }
+                        }
+                      }
                     }
                     break;
                 case "scene-start-1":
-                    RenJS.sceneStart = true;
+                    RenJS.cgsManager.move("train");
+                    RenJS.waitTimeout(1000);
+                    // RenJS.sceneStart = false;
                     break;
                 case "say" :
                     RenJS.textManager.say(actor,params);

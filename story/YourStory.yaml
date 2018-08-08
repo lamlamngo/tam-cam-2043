@@ -8,12 +8,13 @@ start:
   # - show intro-city: AT CENTER WITH FUSION
   - ambient RAIN:
   - scene-start-1:
+  - wait: 1000
   - text: Rạng sáng mùa đông năm ấy, khi cả thành phố đang chìm sâu trong giấc ngủ
-  - dis:
+  # - dis:
   - text: Một cặp song sinh cất tiếng khóc chào đời.
-  - dis:
-  - hide train and intro-city and intro-background: WITH FADE
+  # - dis:
   - scene-change-1:
+  - hide train and intro-city and intro-background: WITH FADE
   - ambient CLEAR:
   - show intro-background-2: AT CENTER WITH FADE
   # - wait : 2000

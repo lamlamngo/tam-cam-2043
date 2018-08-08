@@ -276,19 +276,4 @@ RenJS.sceneChange = false;
 RenJS.sceneStart = false;
 
 game.state.update = function my_update() {
-  if (RenJS.sceneStart) {
-    RenJS.cgsManager.move("train");
-    RenJS.waitTimeout(500);
-    RenJS.sceneStart = false;
-  }
-  // if (RenJS.cgsManager.cgs["train"]){
-  //   if (RenJS.cgsManager.cgs["train"].x == -0){
-  //       RenJS.cgsManager.cgs["train"].x = 1500;
-  //       RenJS.cgsManager.move("train");
-  //   } else {
-  //     console.log("no no");
-  //   }
-  // } else{
-  //   console.log("no");
-  // };
 };
