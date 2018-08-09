@@ -14,8 +14,8 @@ start:
   - text: Một cặp song sinh cất tiếng khóc chào đời.
   # - dis:
   - scene-change-1:
-  - hide train and intro-city and intro-background: WITH FADE
   - ambient CLEAR:
+  - hide train and intro-city and intro-background: WITH FADE
   - show intro-background-2: AT CENTER WITH FADE
   # - wait : 2000
   - text: Tuy rằng sinh đôi, nhưng đứa trẻ ra sau khóc nhiều hơn, được cha mẹ chăm sóc nhiều hơn.
