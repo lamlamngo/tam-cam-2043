@@ -27,7 +27,7 @@ hud:
   message:
     position:
       x: 0
-      y: 244
+      y: 246
     textPosition:
       x: 160
       y: 10
