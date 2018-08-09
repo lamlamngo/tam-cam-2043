@@ -39,3 +39,12 @@ start:
   - hide Tam: WITH FADE
   - show Cam: normal AT RIGHT WITH FADE
   - Cam says: Bạn nguyễn Hà thùy Linh cũng vẽ mình.
+  - hide Cam: WITH FADE
+  - hide living-room: AT CENTERREAL WITH FADE
+  - show xuong: AT CENTERREAL WITH FUSION
+  - text: Đây là một cái xưởng.
+  - show Cam: WITH CUT AT OUTRIGHT
+  - show Cam: WITH MOVE AT CENTER
+  - text: Đây là nơi Tấm làm việc.
+  - hide Cam: WITH FADE
+  - hide xuong: WITH FUSION
