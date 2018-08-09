@@ -8,6 +8,7 @@ function Character(name,speechColour){
     this.lastScale = 1;
 
     this.addLook = function(lookName,image){
+        console.log((image ? image : lookName));
         var look = RenJS.storyManager.characterSprites.create(config.positions.CENTER.x,config.positions.CENTER.y,(image ? image : lookName));
         look.anchor.set(0.5,0.5);
         look.alpha = 0;
@@ -15,6 +16,11 @@ function Character(name,speechColour){
         this.looks[lookName] = look;
         if (!this.currentLook){
             this.currentLook = this.looks[lookName];
+        }
+
+        if (lookName == "blink") {
+          look.animations.add('blink');
+          look.animations.play('blink', 2, true);
         }
     }
 }

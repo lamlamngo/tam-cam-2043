@@ -1,0 +1,39 @@
+{ "frames": {
+   "tamcam2043 0.aseprite": {
+    "frame": { "x": 0, "y": 0, "w": 192, "h": 192 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 192, "h": 192 },
+    "sourceSize": { "w": 192, "h": 192 },
+    "duration": 100
+   },
+   "tamcam2043 1.aseprite": {
+    "frame": { "x": 192, "y": 0, "w": 192, "h": 192 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 192, "h": 192 },
+    "sourceSize": { "w": 192, "h": 192 },
+    "duration": 100
+   }
+ },
+ "meta": {
+  "app": "http://www.aseprite.org/",
+  "version": "1.2.9-x64",
+  "image": "C:\\Users\\User\\tam-cam-2049\\assets\\characters\\tam_blink.png",
+  "format": "RGBA8888",
+  "size": { "w": 512, "h": 256 },
+  "scale": "1",
+  "frameTags": [
+  ],
+  "layers": [
+   { "name": "sprite", "opacity": 255, "blendMode": "normal" },
+   { "name": "mouthclose", "opacity": 255, "blendMode": "normal" },
+   { "name": "eyeopen", "opacity": 255, "blendMode": "normal" },
+   { "name": "eyeclose", "opacity": 255, "blendMode": "normal" },
+   { "name": "tanktop", "opacity": 255, "blendMode": "normal" },
+   { "name": "jacket", "opacity": 255, "blendMode": "normal" }
+  ],
+  "slices": [
+  ]
+ }
+}

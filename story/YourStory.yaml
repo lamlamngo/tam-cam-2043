@@ -1,58 +1,59 @@
 
 start:
-  - wait: 3000
-  - play intromusic:
-  - show intro-background and train and black and intro-city: AT CENTER WITH FADE
-  # - show train: AT START WITH CUT
-  # - show black: AT CENTER WITH CUT
-  # - show intro-city: AT CENTER WITH FUSION
-  - ambient RAIN:
-  - scene-start-1:
-  - wait: 1000
-  - text: Rạng sáng mùa đông năm ấy, khi cả thành phố đang chìm sâu trong giấc ngủ
-  # - dis:
-  - text: Một cặp song sinh cất tiếng khóc chào đời.
-  # - dis:
-  - scene-change-1:
-  - ambient CLEAR:
-  - hide train and intro-city and intro-background: WITH FADE
-  - show intro-background-2: AT CENTER WITH FADE
-  # - wait : 2000
-  - text: Tuy rằng sinh đôi, nhưng đứa trẻ ra sau khóc nhiều hơn, được cha mẹ chăm sóc nhiều hơn.
-  - text: Đứa trẻ ra trước, ít nói, ít cười, chỉ biết nhìn em mình lớn lên trong vòng tay yêu thương của cha mẹ từ đằng xa.
-  - hide intro-background-2: WITH FADE
-
-  - show intro-background-3: AT CENTER WITH FADE
-  # - wait : 2000
-  - text: Tấm luôn cô độc, nhưng Cám và cha mẹ không ai đoái hoài.
-  - hide intro-background-3: WITH FADE
-  - text: Một ngày, cuộc đời Tấm sẽ thay đổi.
-  - text: Cô sẽ biến thành một con người ít ai có thể nhận ra.
-  - effect SHOWTITLE:
-    title:
-    subtitle: Chương 1
-  - hide black:
-  - show living-room: AT CENTERREAL WITH FADE
-  - text: Mình đang thử xem chữ chạy thế nào và có mượt không?
-  - show Tam: normal AT LEFT WITH FADE
-  - Tam says: Bạn Nguyễn Hà Thùy Linh vẽ mình.
-  - hide Tam: WITH FADE
-  - show Cam: normal AT RIGHT WITH FADE
-  - Cam says: Bạn nguyễn Hà thùy Linh cũng vẽ mình.
-  - hide Cam: WITH FADE
-  - hide living-room: AT CENTERREAL WITH FADE
-  - show xuong: AT CENTERREAL WITH FUSION
-  - text: Đây là một cái xưởng.
-  - show Cam: WITH CUT AT OUTRIGHT
-  - show Cam: WITH MOVE AT CENTERCHAR
-  - Cam says: Đây là nơi Tấm làm việc.
-  - hide Cam: WITH FADE
-  - hide xuong: WITH FUSION
-  - show junkyard: AT CENTERREAL WITH FUSION
-  - text: Đây là một bãi phế liệu.
-  - show Tam: WITH CUT AT OUTLEFT
-  - show Tam: WITH MOVE AT CENTERCHAR
-  - Tam says: we find love in a hopeless place.
-  - hide Tam: WITH FUSION
-  - show shop: AT CENTERREAL WITH FUSION
-  - text: Đây là đẹp pan nơ
+    - show Tam: blink AT CENTER WITH FADE
+  # - wait: 3000
+  # - play intromusic:
+  # - show intro-background and train and black and intro-city: AT CENTER WITH FADE
+  # # - show train: AT START WITH CUT
+  # # - show black: AT CENTER WITH CUT
+  # # - show intro-city: AT CENTER WITH FUSION
+  # - ambient RAIN:
+  # - scene-start-1:
+  # - wait: 1000
+  # - text: Rạng sáng mùa đông năm ấy, khi cả thành phố đang chìm sâu trong giấc ngủ
+  # # - dis:
+  # - text: Một cặp song sinh cất tiếng khóc chào đời.
+  # # - dis:
+  # - scene-change-1:
+  # - ambient CLEAR:
+  # - hide train and intro-city and intro-background: WITH FADE
+  # - show intro-background-2: AT CENTER WITH FADE
+  # # - wait : 2000
+  # - text: Tuy rằng sinh đôi, nhưng đứa trẻ ra sau khóc nhiều hơn, được cha mẹ chăm sóc nhiều hơn.
+  # - text: Đứa trẻ ra trước, ít nói, ít cười, chỉ biết nhìn em mình lớn lên trong vòng tay yêu thương của cha mẹ từ đằng xa.
+  # - hide intro-background-2: WITH FADE
+  #
+  # - show intro-background-3: AT CENTER WITH FADE
+  # # - wait : 2000
+  # - text: Tấm luôn cô độc, nhưng Cám và cha mẹ không ai đoái hoài.
+  # - hide intro-background-3: WITH FADE
+  # - text: Một ngày, cuộc đời Tấm sẽ thay đổi.
+  # - text: Cô sẽ biến thành một con người ít ai có thể nhận ra.
+  # - effect SHOWTITLE:
+  #   title:
+  #   subtitle: Chương 1
+  # - hide black:
+  # - show living-room: AT CENTERREAL WITH FADE
+  # - text: Mình đang thử xem chữ chạy thế nào và có mượt không?
+  # - show Tam: normal AT LEFT WITH FADE
+  # - Tam says: Bạn Nguyễn Hà Thùy Linh vẽ mình.
+  # - hide Tam: WITH FADE
+  # - show Cam: normal AT RIGHT WITH FADE
+  # - Cam says: Bạn nguyễn Hà thùy Linh cũng vẽ mình.
+  # - hide Cam: WITH FADE
+  # - hide living-room: AT CENTERREAL WITH FADE
+  # - show xuong: AT CENTERREAL WITH FUSION
+  # - text: Đây là một cái xưởng.
+  # - show Cam: WITH CUT AT OUTRIGHT
+  # - show Cam: WITH MOVE AT CENTERCHAR
+  # - Cam says: Đây là nơi Tấm làm việc.
+  # - hide Cam: WITH FADE
+  # - hide xuong: WITH FUSION
+  # - show junkyard: AT CENTERREAL WITH FUSION
+  # - text: Đây là một bãi phế liệu.
+  # - show Tam: WITH CUT AT OUTLEFT
+  # - show Tam: WITH MOVE AT CENTERCHAR
+  # - Tam says: we find love in a hopeless place.
+  # - hide Tam: WITH FUSION
+  # - show shop: AT CENTERREAL WITH FUSION
+  # - text: Đây là đẹp pan nơ

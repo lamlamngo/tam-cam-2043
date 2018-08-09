@@ -9,6 +9,7 @@ characters:
     speechColour: "#ca90cf"
     looks:
       normal: assets/characters/tam_normal.png
+      blink: assets/characters/tam_blink.png
   Cam:
     displayName: Cám
     speechColour: "#d5e6e7"
