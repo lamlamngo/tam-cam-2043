@@ -24,7 +24,7 @@ var defaults = {
 
     positions : {
         LEFT: {x:globalConfig.w/6,y:globalConfig.h/2 -16},
-        OUTLEFT: {x:-(globalConfig.w/6),y:globalConfig.h},
+        OUTLEFT: {x:-(globalConfig.w/6),y:globalConfig.h/2 -16},
         CENTER: {x:globalConfig.w/2,y:globalConfig.h/2 - 25},
         CENTERREAL: {x:globalConfig.w/2,y:globalConfig.h/2},
         RIGHT: {x:(globalConfig.w/6)*5,y:globalConfig.h/2 - 16},

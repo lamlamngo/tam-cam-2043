@@ -45,6 +45,11 @@ start:
   - text: Đây là một cái xưởng.
   - show Cam: WITH CUT AT OUTRIGHT
   - show Cam: WITH MOVE AT CENTER
-  - text: Đây là nơi Tấm làm việc.
+  - Cam says: Đây là nơi Tấm làm việc.
   - hide Cam: WITH FADE
   - hide xuong: WITH FUSION
+  - show junkyard: AT CENTERREAL WITH FUSION
+  - text: Đây là một bãi phế liệu.
+  - show Tam: WITH CUT AT OUTLEFT
+  - show Tam: WITH MOVE AT CENTER
+  - Tam says: we find love in a hopeless place.

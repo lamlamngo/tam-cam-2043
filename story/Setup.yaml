@@ -1,7 +1,7 @@
 backgrounds:
   living-room: assets/backgrounds/livingroom.png
   xuong: assets/backgrounds/xuong.png
-  junkyard: assets/background/junkyard.png
+  junkyard: assets/backgrounds/junkyard.png
 characters:
   Tam:
     displayName: Tấm
