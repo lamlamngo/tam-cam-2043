@@ -28,6 +28,7 @@ function Character(name,speechColour){
 function CharactersManager(){
     this.characters = {};
     this.showing = {};
+    this.current = [];
 
     this.add = function(name,displayName,speechColour,looks){
         this.characters[name] = new Character(displayName,speechColour);
@@ -47,6 +48,8 @@ function CharactersManager(){
             ch.lastScale = props.flipped ? -1 : 1;
         }
         this.showing[name] = {look: ch.currentLook.name,position:props.position,flipped:(ch.lastScale==-1)};
+        console.log(ch.looks[props.look]);
+        this.current.push(ch.looks[props.look]);
         transition(oldLook,ch.currentLook,props.position,ch.lastScale,RenJS.storyManager.characterSprites);
     }
 
@@ -56,6 +59,10 @@ function CharactersManager(){
         ch.currentLook = null;
         delete this.showing[name];
         // console.log("hiding ch "+name);
+        var index = this.current.indexOf(ch.looks["blink"]);
+        if (index > -1) {
+          this.current.splice(index, 1);
+        }
         transition(oldLook,null);
     }
 

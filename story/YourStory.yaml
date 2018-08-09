@@ -1,6 +1,7 @@
 
 start:
     - show Tam: blink AT CENTER WITH FADE
+    - hide Tam: 
   # - wait: 3000
   # - play intromusic:
   # - show intro-background and train and black and intro-city: AT CENTER WITH FADE
