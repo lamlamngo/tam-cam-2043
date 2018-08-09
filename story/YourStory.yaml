@@ -53,3 +53,6 @@ start:
   - show Tam: WITH CUT AT OUTLEFT
   - show Tam: WITH MOVE AT CENTERCHAR
   - Tam says: we find love in a hopeless place.
+  - hide Tam: WITH FUSION
+  - show shop: AT CENTERREAL WITH FUSION
+  - text: Đây là đẹp pan nơ
