@@ -73,7 +73,7 @@ RenJS.effects = {
         RenJS.gui.hud.messageBox.destroy();
         RenJS.gui.initHUD("real");
         RenJS.gui.hud.messageBox.x += 0;
-        RenJS.gui.hud.messageBox.y += 14;
+        RenJS.gui.hud.messageBox.y = 279;
         RenJS.gui.hud.text.x = 20;
         RenJS.gui.showHUD();
 
