@@ -13,8 +13,10 @@ var RenJS = {
         RenJS.control.paused = false;
         RenJS.gui.showHUD();
 
-        for (var i = 0; i < RenJS.ambient.emitters.length; i++){
-          RenJS.ambient.emitters[i].on = true;
+        if (!RenJS.sceneChange){
+          for (var i = 0; i < RenJS.ambient.emitters.length; i++){
+            RenJS.ambient.emitters[i].on = true;
+          }
         }
 
         RenJS.storyManager.interpret();

@@ -180,6 +180,8 @@ function StoryManager(){
                           }
                         }
                       }
+
+                      RenJS.sceneChange = true;
                     }
                     break;
                 case "scene-start-1":
