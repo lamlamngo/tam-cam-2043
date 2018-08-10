@@ -18,10 +18,9 @@ function Character(name,speechColour){
             this.currentLook = this.looks[lookName];
         }
 
-        if (lookName == "blink") {
-          look.animations.add('blink');
-        } else if (lookName == "talk") {
-          look.animations.add('talk');
+        if (lookName == "action") {
+          look.animations.add('blink', [0,1]);
+          look.animations.add('talk', [2,3]);
         }
     }
 }
@@ -49,7 +48,7 @@ function CharactersManager(){
             ch.lastScale = props.flipped ? -1 : 1;
         }
         this.showing[name] = {look: ch.currentLook.name,position:props.position,flipped:(ch.lastScale==-1)};
-        if (props.look == "blink") {
+        if (props.look == "action") {
             this.current.push(ch.looks[props.look]);
         }
         // } else if (props.look == "talk") {
@@ -65,7 +64,7 @@ function CharactersManager(){
         ch.currentLook = null;
         delete this.showing[name];
         // console.log("hiding ch "+name);
-        var index = this.current.indexOf(ch.looks["blink"]);
+        var index = this.current.indexOf(ch.looks["action"]);
         if (index > -1) {
           this.current.splice(index, 1);
         }

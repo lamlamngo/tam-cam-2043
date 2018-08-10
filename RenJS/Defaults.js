@@ -37,6 +37,7 @@ var defaults = {
     //miliseconds for fade transitions
     fadetime : 750,
     skiptime: 50,
+    waitClick: 2000,
     //miliseconds to wait before continuing
     timeout : 5000,
     //avoid continuous clicking by waiting a few miliseconds before accepting new "clicks"

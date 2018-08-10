@@ -157,7 +157,7 @@ var RenJS = {
                 console.log("skipping action "+RenJS.control.action);
                 console.log(act);
                 RenJS.control.nextAction();
-            },config.skiptime);
+            },config.waitClick);
         } else {
             RenJS.control.waitForClick = true;
         }

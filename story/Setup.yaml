@@ -8,9 +8,7 @@ characters:
     displayName: Tấm
     speechColour: "#ca90cf"
     looks:
-      normal: assets/characters/tam_normal.png
-      blink: assets/characters/tam_blink.png
-      talk:
+      action: assets/characters/tam_normal.png
   Cam:
     displayName: Cám
     speechColour: "#d5e6e7"

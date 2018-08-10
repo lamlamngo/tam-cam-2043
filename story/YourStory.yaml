@@ -42,7 +42,7 @@ start:
   - show living-room: AT CENTERREAL WITH FADE
   - text: Mình đang thử xem chữ chạy thế nào và có mượt không?
   - hide text:
-  - show Tam: talk AT LEFT WITH FADE
+  - show Tam: action AT LEFT WITH FADE
   - Tam says: Bạn Nguyễn Hà Thùy Linh vẽ mình.
   - hide Tam: WITH FADE
   # - show Cam: normal AT RIGHT WITH FADE
@@ -52,10 +52,8 @@ start:
   - show xuong: AT CENTERREAL WITH FUSION
   - text: Đây là một cái xưởng.
   - hide text:
-  - show Tam: blink WITH CUT AT OUTRIGHT
-  - show Tam: blink WITH MOVE AT CENTERCHAR
-  - hide Tam: WITH CUT
-  - show Tam: talk AT CENTERCHAR
+  - show Tam: action WITH CUT AT OUTRIGHT
+  - show Tam: action WITH MOVE AT CENTERCHAR
   - Tam says: Đây là nơi Tấm làm việc. Đây là nơi Tấm làm việc. Đây là nơi Tấm làm việc. Đây là nơi Tấm làm việc. Đây là nơi Tấm làm việc.
   - hide text:
   - hide Tam: WITH FADE
@@ -63,14 +61,12 @@ start:
   - show junkyard: AT CENTERREAL WITH FUSION
   - text: Đây là một bãi phế liệu.
   - hide text:
-  - show Tam: blink WITH CUT AT OUTLEFT
-  - show Tam: blink WITH MOVE AT CENTERCHAR
-  - hide Tam:
-  - show Tam: talk AT CENTERCHAR
+  - show Tam: action WITH CUT AT OUTLEFT
+  - show Tam: action WITH MOVE AT CENTERCHAR
   - Tam says: we find love in a hopeless place. we find love in a hopeless place. we find love in a hopeless place. we find love in a hopeless place. we find love in a hopeless place. we find love in a hopeless place.
   - hide text:
   - hide Tam: WITH FUSION
   - show shop: AT CENTERREAL WITH FUSION
-  - show Tam: blink AT RIGHT WITH FUSION
+  - show Tam: action AT RIGHT WITH FUSION
   - text: Đây là đẹp pan nơ
   - hide text:

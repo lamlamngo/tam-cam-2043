@@ -119,12 +119,9 @@ var preloadStory = {
     //preload characters
     _.each(RenJS.setup.characters,function(character,name){
         _.each(character.looks,function(filename,look){
-            if (look == "blink") {
-                console.log("IN HERE");
-                game.load.atlasJSONArray('Tam_blink','assets/characters/tam_blink.png','assets/characters/tam_blink.json');
-            } else if (look == 'talk') {
-                game.load.atlasJSONArray('Tam_talk','assets/characters/tam_speak.png','assets/characters/tam_speak.json');
-            }else {
+            if (look == "action") {
+                game.load.atlasJSONArray('Tam_action','assets/characters/tam_sprites.png','assets/characters/tam_sprites.json');
+            } else {
                 game.load.image(name+"_"+look, filename);
             }
         });
