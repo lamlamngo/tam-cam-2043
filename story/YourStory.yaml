@@ -47,7 +47,7 @@ start:
   - show Tam: blink WITH MOVE AT CENTERCHAR
   - hide Tam: WITH CUT
   - show Tam: talk AT CENTERCHAR
-  - Tam says: Đây là nơi Tấm làm việc.
+  - Tam says: Đây là nơi Tấm làm việc. Đây là nơi Tấm làm việc. Đây là nơi Tấm làm việc. Đây là nơi Tấm làm việc. Đây là nơi Tấm làm việc.
   - hide Tam: WITH FADE
   - hide xuong: WITH FUSION
   - show junkyard: AT CENTERREAL WITH FUSION
@@ -56,7 +56,7 @@ start:
   - show Tam: blink WITH MOVE AT CENTERCHAR
   - hide Tam:
   - show Tam: talk AT CENTERCHAR
-  - Tam says: we find love in a hopeless place.
+  - Tam says: we find love in a hopeless place. we find love in a hopeless place. we find love in a hopeless place. we find love in a hopeless place. we find love in a hopeless place. we find love in a hopeless place.
   - hide Tam: WITH FUSION
   - show shop: AT CENTERREAL WITH FUSION
   - show Tam: blink AT RIGHT WITH FUSION

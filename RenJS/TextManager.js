@@ -23,6 +23,8 @@ function TextManager(){
 
     this.say = function(name,text){
         var character = RenJS.chManager.characters[name];
+        RenJS.notTalking = false;
         this.show(text,character.name,character.speechColour, character.looks["talk"]);
+        RenJS.notTalking = true;
     }
 }
