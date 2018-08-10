@@ -228,7 +228,7 @@ function StoryManager(){
                     // }
                     break;
                 case "text" :
-                    RenJS.textManager.show(params);
+                    RenJS.textManager.show(params, null);
                     break;
                 case "dis" :
                     RenJS.textManager.hide();

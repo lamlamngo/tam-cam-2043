@@ -122,7 +122,9 @@ var preloadStory = {
             if (look == "blink") {
                 console.log("IN HERE");
                 game.load.atlasJSONArray('Tam_blink','assets/characters/tam_blink.png','assets/characters/tam_blink.json');
-            } else {
+            } else if (look == 'talk') {
+                game.load.atlasJSONArray('Tam_talk','assets/characters/tam_speak.png','assets/characters/tam_speak.json');
+            }else {
                 game.load.image(name+"_"+look, filename);
             }
         });

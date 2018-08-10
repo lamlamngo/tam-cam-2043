@@ -20,7 +20,8 @@ function Character(name,speechColour){
 
         if (lookName == "blink") {
           look.animations.add('blink');
-          // look.animations.play('blink', 2, true);
+        } else if (lookName == "talk") {
+          look.animations.add('talk');
         }
     }
 }
@@ -48,8 +49,13 @@ function CharactersManager(){
             ch.lastScale = props.flipped ? -1 : 1;
         }
         this.showing[name] = {look: ch.currentLook.name,position:props.position,flipped:(ch.lastScale==-1)};
-        console.log(ch.looks[props.look]);
-        this.current.push(ch.looks[props.look]);
+        if (props.look == "blink") {
+            this.current.push(ch.looks[props.look]);
+        }
+        // } else if (props.look == "talk") {
+        //     ch.looks[props.look].animations.stop("blink");
+        //     ch.looks[props.look].animations.play('talk', 3, true);
+        // }
         transition(oldLook,ch.currentLook,props.position,ch.lastScale,RenJS.storyManager.characterSprites);
     }
 
