@@ -404,6 +404,7 @@ function SimpleGUI(meta){
 
     this.hideText = function(){
         this.hud.messageBox.visible = false;
+        this.hud.text.text = "";
         this.hideCTC();
     }
 
