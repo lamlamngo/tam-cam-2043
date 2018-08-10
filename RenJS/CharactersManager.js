@@ -20,7 +20,7 @@ function Character(name,speechColour){
 
         if (lookName == "blink") {
           look.animations.add('blink');
-          look.animations.play('blink', 2, true);
+          // look.animations.play('blink', 2, true);
         }
     }
 }
