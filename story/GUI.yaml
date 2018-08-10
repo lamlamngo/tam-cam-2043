@@ -67,22 +67,22 @@ hud:
     auto:
       position:
         x: 505
-        y: 272
+        y: 287
       sprite: qmAutoButton
     skip:
       position:
         x: 500
-        y: 308
+        y: 323
       sprite: qmSkipButton
     save:
       position:
         x: 549
-        y: 272
+        y: 287
       sprite: qmSaveButton
     settings:
       position:
         x: 545
-        y: 302
+        y: 317
       sprite: qmSettingsButton
     # mute: qmMuteButton 1175 60
 menus:
