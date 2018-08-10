@@ -6,7 +6,7 @@ var globalConfig = {
   splash: { //The "Loading" page for your game
     loadingScreen: "assets/gui/logo.png", //splash background
     loadingBar: {
-      fullBar: "assets/gui/loading_bars.png",
+      fullBar: "assets/gui/loadingbar.png",
       position: {x:0,y:0}
     }
   },
