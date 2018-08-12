@@ -36,38 +36,62 @@ start:
   - text: Cô sẽ biến thành một con người ít ai có thể nhận ra.
   - hide text:
   - effect SHOWTITLE:
-    title:
-    subtitle: Chương 1
+    title: Chương Một
+    subtitle: Certain Women
   - hide black:
-  - show living-room: AT CENTERREAL WITH FADE
-  - text: Mình đang thử xem chữ chạy thế nào và có mượt không?
-  - hide text:
+  - show shop: AT CENTEREAL WITH FUSION
   - show tam: action AT LEFT WITH FADE
-  - tam says: Bạn Nguyễn Hà Thùy Linh vẽ mình.
-  - hide tam: WITH FADE
-  # - show Cam: normal AT RIGHT WITH FADE
-  # - Cam says: Bạn nguyễn Hà thùy Linh cũng vẽ mình.
-  # - hide Cam: WITH FADE
-  - hide living-room: AT CENTERREAL WITH FADE
-  - show xuong: AT CENTERREAL WITH FUSION
-  - text: Đây là một cái xưởng.
-  - hide text:
-  - show tam: action WITH CUT AT OUTRIGHT
-  - show tam: action WITH MOVE AT CENTERCHAR
-  - tam says: Đây là nơi Tấm làm việc. Đây là nơi Tấm làm việc. Đây là nơi Tấm làm việc. Đây là nơi Tấm làm việc. Đây là nơi Tấm làm việc.
-  - hide text:
-  - hide tam: WITH FADE
-  - hide xuong: WITH FUSION
-  - show junkyard: AT CENTERREAL WITH FUSION
-  - text: Đây là một bãi phế liệu.
-  - hide text:
-  - show tam: action WITH CUT AT OUTLEFT
-  - show tam: action WITH MOVE AT CENTERCHAR
-  - tam says: we find love in a hopeless place. we find love in a hopeless place. we find love in a hopeless place. we find love in a hopeless place. we find love in a hopeless place. we find love in a hopeless place.
-  - hide text:
-  - hide tam: WITH FUSION
-  - show shop: AT CENTERREAL WITH FUSION
-  - show tam: action AT LEFT WITH FUSION
-  - text: Đây là đẹp pan nơ
-  - hide text:
+  - text: Đây là cuộc trò chuyện thử.
   - show kstew: action AT RIGHT WITH FADE
+  - tam says: I drove over.
+  - tam says: I thought I was in the wrong place.
+  - kstew says: You drove here?
+  - tam says: I was sorry you stopped teaching the class.
+  - tam says: I looked forward to it.
+  - kstew says: I was going to tell you on Tuesday.
+  - kstew says: I asked for a replacement, cause of the drive.
+  - tam says: That drive is pretty bad.
+  - kstew says: Right.
+  - text: ...
+  - tam says: I don't mean to keep you from getting to work or anything.
+  - tam says: I just knew that if I didn't start driving, I wasn't going to see you again.
+  - tam says: I didn't want that.
+  - tam says: That's all.
+  - kstew says: Okay.
+  - text: ...
+  - tam says: I have to go feed now. Animals will be wondering where I'm at.
+  - hide tam: WITH FADE
+  - text: Engine rewing. Breakes squel and Tam drives away.
+  # - hide black:
+  # - show living-room: AT CENTERREAL WITH FADE
+  # - text: Mình đang thử xem chữ chạy thế nào và có mượt không?
+  # - hide text:
+  # - show tam: action AT LEFT WITH FADE
+  # - tam says: Bạn Nguyễn Hà Thùy Linh vẽ mình.
+  # - hide tam: WITH FADE
+  # # - show Cam: normal AT RIGHT WITH FADE
+  # # - Cam says: Bạn nguyễn Hà thùy Linh cũng vẽ mình.
+  # # - hide Cam: WITH FADE
+  # - hide living-room: AT CENTERREAL WITH FADE
+  # - show xuong: AT CENTERREAL WITH FUSION
+  # - text: Đây là một cái xưởng.
+  # - hide text:
+  # - show tam: action WITH CUT AT OUTRIGHT
+  # - show tam: action WITH MOVE AT CENTERCHAR
+  # - tam says: Đây là nơi Tấm làm việc. Đây là nơi Tấm làm việc. Đây là nơi Tấm làm việc. Đây là nơi Tấm làm việc. Đây là nơi Tấm làm việc.
+  # - hide text:
+  # - hide tam: WITH FADE
+  # - hide xuong: WITH FUSION
+  # - show junkyard: AT CENTERREAL WITH FUSION
+  # - text: Đây là một bãi phế liệu.
+  # - hide text:
+  # - show tam: action WITH CUT AT OUTLEFT
+  # - show tam: action WITH MOVE AT CENTERCHAR
+  # - tam says: we find love in a hopeless place. we find love in a hopeless place. we find love in a hopeless place. we find love in a hopeless place. we find love in a hopeless place. we find love in a hopeless place.
+  # - hide text:
+  # - hide tam: WITH FUSION
+  # - show shop: AT CENTERREAL WITH FUSION
+  # - show tam: action AT LEFT WITH FUSION
+  # - text: Đây là đẹp pan nơ
+  # - hide text:
+  # - show kstew: action AT RIGHT WITH FADE
