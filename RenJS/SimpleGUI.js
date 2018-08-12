@@ -62,7 +62,7 @@ function SimpleGUI(meta){
         this.hud.group.visible = false;
         var messageBox = this.elements.hud.message;
         this.hud.messageBox = game.add.image(messageBox.position.x,messageBox.position.y,name,0,this.hud.group);
-        this.hud.messageBox.alpha = 0.9;
+        this.hud.messageBox.alpha = 1;
         // this.hud.messageBox.addChild(this.hud.secondLayer);
         var style = this.getTextStyle(messageBox.textStyle);
 

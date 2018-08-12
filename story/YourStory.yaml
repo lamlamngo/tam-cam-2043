@@ -14,8 +14,8 @@ start:
   # - dis:
   - text: Một cặp song sinh cất tiếng khóc chào đời.
   # - dis:
-  - hide text:
   - scene-change-1:
+  - hide text:
   - ambient CLEAR:
   - hide train and intro-city and intro-background: WITH FADE
   - show intro-background-2: AT CENTER WITH FADE
@@ -44,7 +44,6 @@ start:
   - show tam: action AT LEFT WITH FADE
   - text: Đây là cuộc trò chuyện thử.
   - show kstew: action AT RIGHT WITH FADE
-  - wait: 1000
   - tam says: I drove over.
   - tam says: I thought I was in the wrong place.
   - kstew says: You drove here?
@@ -63,7 +62,7 @@ start:
   - text: ...
   - tam says: I have to go feed now. Animals will be wondering where I'm at.
   - hide tam: WITH FADE
-  - text: Engine rewing. Breakes squel and Tam drives away.
+  - text: Engine rewing. Brakes squeal and Tam drives away.
   # - hide black:
   # - show living-room: AT CENTERREAL WITH FADE
   # - text: Mình đang thử xem chữ chạy thế nào và có mượt không?
