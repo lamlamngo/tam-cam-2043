@@ -4,16 +4,31 @@ backgrounds:
   junkyard: assets/backgrounds/junkyard.png
   shop: assets/backgrounds/depanneur.png
 characters:
-  Tam:
+  tam:
     displayName: Tấm
     speechColour: "#ca90cf"
     looks:
-      action: assets/characters/tam_normal.png
-  Cam:
+      action:
+  cam:
     displayName: Cám
     speechColour: "#d5e6e7"
     looks:
-      normal: assets/characters/cam_normal.png
+      action:
+  kstew:
+    displayName: Quạ
+    speechColour: "#f44253"
+    looks:
+      action:
+  mother:
+    displayName: Cao Thị
+    speechColour: "#62f441"
+    looks:
+      action:
+  boot:
+    displayName: Bụt
+    speechColour: "#41dff4"
+    looks:
+      action:
 cgs:
   black: assets/backgrounds/black.png
   intro-background-2: assets/backgrounds/nursery.png

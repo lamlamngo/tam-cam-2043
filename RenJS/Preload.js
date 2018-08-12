@@ -120,7 +120,7 @@ var preloadStory = {
     _.each(RenJS.setup.characters,function(character,name){
         _.each(character.looks,function(filename,look){
             if (look == "action") {
-                game.load.atlasJSONArray('Tam_action','assets/characters/tam_sprites.png','assets/characters/tam_sprites.json');
+                game.load.atlasJSONArray(name + '_action', 'assets/characters/' + name + '_sprites.png', 'assets/characters/' + name + '_sprites.json');
             } else {
                 game.load.image(name+"_"+look, filename);
             }
