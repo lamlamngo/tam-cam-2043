@@ -45,16 +45,19 @@ RenJS.effects = {
         RenJS.tweenManager.chain(tweenChain);
     },
     SHOWTITLE: function(param){
-        var bg = game.add.sprite(game.world.centerX,game.world.centerY,"title");
+        var bg = game.add.sprite(game.world.centerX,game.world.centerY - 50,"title");
         bg.anchor.set(0.5);
         var style = _.clone(_.extend(config.defaultTextStyle,RenJS.gui.elements.hud.choice.text));
         style.font = "50pt "+RenJS.gui.elements.assets.fonts[0];
 
-        var title = game.add.text(0,-20, param.title, style);
-        style.font = "25pt "+RenJS.gui.elements.assets.fonts[0];
+        // var title = game.add.text(0,20, param.title, style);
+        // style.font = "25pt "+RenJS.gui.elements.assets.fonts[0];
+        var title = game.add.bitmapText(0, 40, 'font', param.title, 25);
+        title.anchor.set(0.5);
+
         // this.hud.text = game.add.bitmapText(messageBox.textPosition.x,messageBox.textPosition.y, 'font', "", 8);
         // var subtitle = game.add.text(0,40, param.subtitle, style);
-        var subtitle = game.add.bitmapText(0, 40, 'font', param.subtitle, 25);
+        var subtitle = game.add.bitmapText(0, 80, 'font', param.subtitle, 15);
         subtitle.anchor.set(0.5);
         title.anchor.set(0.5);
         bg.addChild(title);

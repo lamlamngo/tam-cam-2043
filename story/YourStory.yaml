@@ -40,9 +40,11 @@ start:
     subtitle: Certain Women
   - hide black:
   - show shop: AT CENTEREAL WITH FUSION
+  - wait: 1000
   - show tam: action AT LEFT WITH FADE
   - text: Đây là cuộc trò chuyện thử.
   - show kstew: action AT RIGHT WITH FADE
+  - wait: 1000
   - tam says: I drove over.
   - tam says: I thought I was in the wrong place.
   - kstew says: You drove here?
