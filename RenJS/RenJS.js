@@ -279,16 +279,19 @@ RenJS.sceneStart = false;
 RenJS.notTalking = true;
 
 game.state.update = function my_update() {
-  var rand = Math.floor(Math.random() * 20);
-  if (rand % 10 == 0 && RenJS.notTalking) {
+  var rand = Math.floor(Math.random() * 100);
+  if (rand == 7 && RenJS.notTalking) {
     if (RenJS.chManager.current.length > 0) {
       var second_rand = Math.floor(Math.random() * RenJS.chManager.current.length);
-      RenJS.chManager.current[second_rand].animations.play('blink', 3, true);
+      if (!RenJS.chManager.current[second_rand].animations.isPlaying) {
+          RenJS.chManager.current[second_rand].animations.play('blink', 3, true);
+      }
     }
   } else if (rand == 13 && RenJS.notTalking){
     if (RenJS.chManager.current.length > 0) {
       var second_rand = Math.floor(Math.random() * RenJS.chManager.current.length);
-      RenJS.chManager.current[second_rand].animations.stop();
+      RenJS.chManager.current[second_rand].animations.stop('blink');
+      RenJS.chManager.current[second_rand].frame = 0;
     }
   }
 };
